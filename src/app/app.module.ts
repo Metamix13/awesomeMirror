@@ -7,6 +7,7 @@ import { ConfigPageComponent } from './config-page/config-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ClockComponent } from './clock/clock.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     ConfigPageComponent,
     NavBarComponent,
     AboutPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    ClockComponent
   ],
   imports: [
     BrowserModule,
