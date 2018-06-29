@@ -8,8 +8,8 @@ import { ConfigPageComponent } from './config-page/config-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
-import { ClockComponent } from './clock/clock.component';
 import {AppRoutingModule} from './routing/app-routing.module';
+import {DashboardComponent} from './dashboard/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import {AppRoutingModule} from './routing/app-routing.module';
     NavBarComponent,
     AboutPageComponent,
     ContactPageComponent,
-    ClockComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
