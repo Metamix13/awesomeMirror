@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="viewMode">
   <div class="container">
     <button class="btn btn-light" (click)="viewMode=!viewMode">Enter View Mode</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -26,6 +26,8 @@
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+<!--ToDo: Symbol als Button verwenden-->
+<button *ngIf="!viewMode" (click)="viewMode=!viewMode">exit View Mode</button>
 
 
 
