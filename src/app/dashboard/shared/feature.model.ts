@@ -3,9 +3,9 @@ export class Feature {
   public description: string;
   public shown: boolean;
 
-  constructor(name: string, description: string){
+  constructor(name: string, description: string, shown: boolean){
     this.name = name;
     this.description = description;
-    this.shown = false;
+    this.shown = shown;
   }
 }
