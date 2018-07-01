@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,6 +12,12 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() viewMode: boolean;
+  @Input() viewModePass: boolean;
+  @Output() isViewModeChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  onViewModeChange(mode:boolean){
+    this.isViewModeChanged.emit(mode);
+  }
+
 
 }

@@ -1,5 +1,7 @@
-<app-nav-bar [viewMode] = "viewMode"></app-nav-bar>
+<app-nav-bar [viewModePass] = "viewMode" (isViewModeChanged)="onModeChangeEvent($event)"></app-nav-bar>
 <div class="outlet">
   <router-outlet></router-outlet>
 </div>
+<p>{{viewMode}}</p>
+
 
