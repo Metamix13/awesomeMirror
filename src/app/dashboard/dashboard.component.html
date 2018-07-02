@@ -1,6 +1,10 @@
-<div class="card" *ngFor="let feature of localFeatureList" ngDraggable>
-  <div id="{{feature.name}}header">Click here to move</div>
-  <p>Move</p>
-  <p>this</p>
-  <p>DIV</p>
+<div class="container">
+    <div class="card" *ngFor="let feature of localFeatureList" ngDraggable [handle]="handler" [position]="{x: feature.xPos, y: feature.yPos}" (endOffset)="onMoveEnd(feature, $event)">
+      <!--ToDo: Durch Icon ersetzen & style auslagern-->
+      <div class="card-header">{{feature.name}}<i #handler style="cursor: move">&#9830;</i></div>
+      <div class="card-body">
+        {{feature.description}}
+      </div>
+  </div>
 </div>
+
