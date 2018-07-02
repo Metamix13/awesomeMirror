@@ -12,6 +12,7 @@ import {AppRoutingModule} from './routing/app-routing.module';
 import {ClockComponent} from './features/clock/clock.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {FeatureService} from './shared/feature.service';
+import {AngularDraggableModule} from 'angular2-draggable';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {FeatureService} from './shared/feature.service';
     BrowserModule,
     FormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularDraggableModule
   ],
   providers: [FeatureService],
   bootstrap: [AppComponent]

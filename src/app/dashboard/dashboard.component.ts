@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FeatureService} from '../shared/feature.service';
 import {Feature} from '../shared/feature.model';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-dashboard',

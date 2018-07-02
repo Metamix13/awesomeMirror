@@ -1,8 +1,4 @@
-<!--<ul>
-  <li *ngFor="let feature of featureList | async">{{feature.shown}}</li>
-</ul>-->
-<div class="card" *ngFor="let feature of localFeatureList" id="{{feature.name}}">
-  <!--Include a header DIV with the same name as the draggable DIV, followed by "header":-->
+<div class="card" *ngFor="let feature of localFeatureList" ngDraggable>
   <div id="{{feature.name}}header">Click here to move</div>
   <p>Move</p>
   <p>this</p>

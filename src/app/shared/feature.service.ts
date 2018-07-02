@@ -10,7 +10,8 @@ export class FeatureService {
   featureList : Feature[];
   constructor() {
     this.featureList = [
-      new Feature('clock','This is a simple clock', false)
+      new Feature('clock','This is a simple clock', false),
+      new Feature('exampleFeature','This is just an example', false)
     ]
   }
 
