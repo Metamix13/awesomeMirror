@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {FeatureService} from '../shared/feature.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,7 +8,7 @@ import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public featureService: FeatureService) { }
 
   ngOnInit() {
   }
