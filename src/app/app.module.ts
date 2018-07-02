@@ -9,7 +9,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import {AppRoutingModule} from './routing/app-routing.module';
-import {DashboardComponent} from './dashboard/dashboard/dashboard.component';
+import {ClockComponent} from './features/clock/clock.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {FeatureService} from './shared/feature.service';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import {DashboardComponent} from './dashboard/dashboard/dashboard.component';
     NavBarComponent,
     AboutPageComponent,
     ContactPageComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClockComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import {DashboardComponent} from './dashboard/dashboard/dashboard.component';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FeatureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

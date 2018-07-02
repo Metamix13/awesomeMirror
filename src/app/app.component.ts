@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Feature} from './shared/feature.model';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,6 @@ export class AppComponent {
   onModeChangeEvent(mode: boolean) {
     this.viewMode = mode;
   }
+
+
 }
