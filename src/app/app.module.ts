@@ -13,6 +13,7 @@ import {ClockComponent} from './features/clock/clock.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {FeatureService} from './shared/feature.service';
 import {AngularDraggableModule} from 'angular2-draggable';
+import { WeatherComponent } from './features/weather/weather.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {AngularDraggableModule} from 'angular2-draggable';
     AboutPageComponent,
     ContactPageComponent,
     DashboardComponent,
-    ClockComponent
+    ClockComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
