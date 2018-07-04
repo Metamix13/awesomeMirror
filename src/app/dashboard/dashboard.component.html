@@ -3,8 +3,10 @@
       <!--ToDo: Durch Icon ersetzen & style auslagern-->
       <div class="card-header">{{feature.name}}<i #handler style="cursor: move">&#9830;</i></div>
       <div class="card-body">
-        <app-clock *ngIf="feature.name === 'clock'"></app-clock>
-        <app-weather *ngIf="feature.name === 'weather'"></app-weather>
+        <div ngSwitch="{{feature.name}}">
+          <app-clock *ngSwitchCase="'clock'"></app-clock>
+          <app-weather *ngSwitchCase="'weather'"></app-weather>
+        </div>
       </div>
   </div>
 </div>
