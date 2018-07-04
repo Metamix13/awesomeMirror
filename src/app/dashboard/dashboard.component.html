@@ -3,7 +3,7 @@
       <!--ToDo: Durch Icon ersetzen & style auslagern-->
       <div class="card-header">{{feature.name}}<i #handler style="cursor: move">&#9830;</i></div>
       <div class="card-body">
-        {{feature.description}}
+        <app-clock *ngIf="feature.name === 'clock'"></app-clock>
       </div>
   </div>
 </div>
