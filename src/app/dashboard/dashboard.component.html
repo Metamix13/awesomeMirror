@@ -13,6 +13,7 @@
       <div class="card-body">
         <div ngSwitch="{{feature.name}}">
           <app-clock *ngSwitchCase="'clock'"></app-clock>
+          <app-date *ngSwitchCase="'date'"></app-date>
           <app-weather *ngSwitchCase="'weather'"></app-weather>
         </div>
       </div>

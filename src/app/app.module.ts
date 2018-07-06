@@ -15,6 +15,7 @@ import {FeatureService} from './shared/feature.service';
 import {AngularDraggableModule} from 'angular2-draggable';
 import { WeatherComponent } from './features/weather/weather.component';
 import {ViewModeService} from './shared/view-mode.service';
+import { DateComponent } from './features/date/date.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {ViewModeService} from './shared/view-mode.service';
     ContactPageComponent,
     DashboardComponent,
     ClockComponent,
-    WeatherComponent
+    WeatherComponent,
+    DateComponent
   ],
   imports: [
     BrowserModule,

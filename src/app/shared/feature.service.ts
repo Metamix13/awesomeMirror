@@ -10,7 +10,9 @@ export class FeatureService {
   constructor() {
     this.featureList = [
       new Feature('clock','This is a simple clock', false),
+      new Feature('date', 'This is a date plugin', false),
       new Feature('weather','This is a weather plugin', false)
+
     ];
     this.resizeFeatures();
   }
@@ -29,9 +31,13 @@ export class FeatureService {
           feature.xPos = 900;
           feature.yPos = 20;
           break;
+        case "date":
+          feature.xPos = 900;
+          feature.yPos = 220;
+          break;
         case "weather":
           feature.xPos = 900;
-          feature.yPos = 300;
+          feature.yPos = 500;
           break;
       }
 
