@@ -10,16 +10,26 @@ export class WeatherComponent implements OnInit {
 
   lat: string;
   lng: string;
+  weatherData: {
+    data: {}
+  };
 
   constructor(public weatherService:WeatherService) { }
 
+
+  //ToDo: Durch Config-Page setzen
   ngOnInit() {
-    this.lat = "40.73";
-    this.lng = "-73.93";
+    this.lat = '52.269760';
+    this.lng = '10.515661';
+    this.getForecast();
   }
 
   getForecast() {
     this.weatherService.currentForecast(this.lat, this.lng)
-      .subscribe(data => console.log(data));
+      .subscribe(data => this.weatherData = data);
+  }
+
+  logWeather(){
+    console.log(this.weatherData);
   }
 }
