@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clock.component.css']
 })
 export class ClockComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    setInterval(() => this.setTime(),1000)
+  }
+  time: number;
 
   ngOnInit() {
+  }
+
+  setTime(){
+    this.time = Date.now();
   }
 
 }
