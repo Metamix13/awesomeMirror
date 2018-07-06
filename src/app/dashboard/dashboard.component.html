@@ -1,7 +1,13 @@
 <div class="container">
-    <div class="card" *ngFor="let feature of localFeatureList" ngDraggable [handle]="handler" [position]="{x: feature.xPos, y: feature.yPos}" (endOffset)="onMoveEnd(feature, $event)">
+    <div class="card"
+         *ngFor="let feature of localFeatureList"
+         ngDraggable
+         [handle]="handler"
+         [position]="{x: feature.xPos, y: feature.yPos}"
+         (endOffset)="onMoveEnd(feature, $event)"
+          [ngClass]="{'border-light': viewModeService.viewMode}">
       <!--ToDo: Durch Icon ersetzen & style auslagern-->
-      <div class="card-header">
+      <div class="card-header" *ngIf="!viewModeService.viewMode">
         {{feature.name}}
           <i class="fa fa-arrows-alt pull-right" style="cursor: move"></i>
       </div>

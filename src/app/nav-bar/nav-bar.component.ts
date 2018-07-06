@@ -1,5 +1,6 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FeatureService} from '../shared/feature.service';
+import {ViewModeService} from '../shared/view-mode.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,16 +9,9 @@ import {FeatureService} from '../shared/feature.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public featureService: FeatureService) { }
+  constructor(public featureService: FeatureService, public viewModeService:ViewModeService) { }
 
   ngOnInit() {
-  }
-
-  @Input() viewModePass: boolean;
-  @Output() isViewModeChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  onViewModeChange(mode:boolean){
-    this.isViewModeChanged.emit(mode);
   }
 
 

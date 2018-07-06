@@ -14,6 +14,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {FeatureService} from './shared/feature.service';
 import {AngularDraggableModule} from 'angular2-draggable';
 import { WeatherComponent } from './features/weather/weather.component';
+import {ViewModeService} from './shared/view-mode.service';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { WeatherComponent } from './features/weather/weather.component';
     AppRoutingModule,
     AngularDraggableModule
   ],
-  providers: [FeatureService],
-  bootstrap: [AppComponent]
+  providers: [
+    FeatureService,
+    ViewModeService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

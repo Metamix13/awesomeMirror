@@ -7,11 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'awesome Mirror';
-  viewMode: boolean = false;
 
-  onModeChangeEvent(mode: boolean) {
-    this.viewMode = mode;
-  }
 
 
 }

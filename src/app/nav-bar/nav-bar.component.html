@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!viewModePass">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!viewModeService.viewMode">
   <div class="container">
-    <button class="btn btn-light" (click)="onViewModeChange(true)">Enter View Mode</button>
+    <button class="btn btn-light" (click)="viewModeService.changeViewMode(true)">Enter View Mode</button>
     <!--Navbar left Content-->
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
@@ -26,7 +26,7 @@
   </div>
 </nav>
 <!--ToDo: Symbol als Button verwenden-->
-<button *ngIf="viewModePass" (click)="onViewModeChange(false)">exit View Mode</button>
+<button *ngIf="viewModeService.viewMode" (click)="viewModeService.changeViewMode(false)">exit View Mode</button>
 
 
 

@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {FeatureService} from '../shared/feature.service';
 import {Feature} from '../shared/feature.model';
 import * as _ from 'lodash';
+import {ViewModeService} from '../shared/view-mode.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +11,7 @@ import * as _ from 'lodash';
 })
 export class DashboardComponent implements OnInit {
   localFeatureList: Feature[];
-  constructor(private featureService: FeatureService) { }
+  constructor(public featureService: FeatureService, public viewModeService:ViewModeService) { }
 
   ngOnInit() {
     this.featureService.getFeatures().subscribe(features => {
