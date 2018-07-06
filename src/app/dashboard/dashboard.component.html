@@ -6,10 +6,9 @@
          [position]="{x: feature.xPos, y: feature.yPos}"
          (endOffset)="onMoveEnd(feature, $event)"
           [ngClass]="{'border-light': viewModeService.viewMode}">
-      <!--ToDo: Durch Icon ersetzen & style auslagern-->
-      <div class="card-header" *ngIf="!viewModeService.viewMode">
+      <div class="card-header" [hidden]="viewModeService.viewMode">
         {{feature.name}}
-          <i class="fa fa-arrows-alt pull-right" style="cursor: move"></i>
+          <i class="fa fa-arrows-alt pull-right" #handler ></i>
       </div>
       <div class="card-body">
         <div ngSwitch="{{feature.name}}">
