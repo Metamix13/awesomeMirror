@@ -1,10 +1,8 @@
-import { Injectable } from '@angular/core';
 import {Feature} from './feature.model';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import * as _ from 'lodash';
 
-@Injectable()
 export class FeatureService {
 
   //List of all available Features
