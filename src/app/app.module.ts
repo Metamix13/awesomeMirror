@@ -16,6 +16,9 @@ import {AngularDraggableModule} from 'angular2-draggable';
 import { WeatherComponent } from './features/weather/weather.component';
 import {ViewModeService} from './shared/view-mode.service';
 import { DateComponent } from './features/date/date.component';
+import {WeatherService} from './shared/weather.service';
+import {HttpClientModule} from '@angular/common/http';
+import {JsonpModule} from '@angular/http';
 
 
 @NgModule({
@@ -35,11 +38,14 @@ import { DateComponent } from './features/date/date.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    AngularDraggableModule
+    AngularDraggableModule,
+    HttpClientModule,
+    JsonpModule
   ],
   providers: [
     FeatureService,
-    ViewModeService],
+    ViewModeService,
+  WeatherService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
