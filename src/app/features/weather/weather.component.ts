@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {WeatherService} from '../../shared/weather.service';
+import { Subscription } from 'rxjs/Subscription';
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-weather',
@@ -10,23 +12,25 @@ export class WeatherComponent implements OnInit {
 
   lat: string;
   lng: string;
-  weatherData: {
-    data: {}
-  };
+  weatherData: {};
 
-  constructor(public weatherService:WeatherService) { }
-
-
-  //ToDo: Durch Config-Page setzen
-  ngOnInit() {
+  constructor(public weatherService:WeatherService) {
     this.lat = '52.269760';
     this.lng = '10.515661';
     this.getForecast();
   }
 
+
+  //ToDo: Durch Config-Page setzen
+  ngOnInit() {
+  }
+
   getForecast() {
-    this.weatherService.currentForecast(this.lat, this.lng)
-      .subscribe(data => this.weatherData = data);
+    //this.weatherData = new Observable<object>()
+    this.weatherService.currentForecast(this.lat, this.lng).subscribe(data => this.weatherData = data.json());
+
+    //this.weatherService.currentForecast(this.lat, this.lng)
+    //  .subscribe(data => this.weatherData = data);
   }
 
   logWeather(){

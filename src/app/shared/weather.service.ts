@@ -11,6 +11,6 @@ export class WeatherService {
   constructor(private jsonp: Jsonp) { }
 
   currentForecast(lat: string, lng: string): Observable<any> {
-    return this.jsonp.request(this.ROOT_URL + lat + ',' + lng + '?callback=JSONP_CALLBACK');
+    return this.jsonp.request(this.ROOT_URL + lat + ',' + lng + '?lang=de&units=si&callback=JSONP_CALLBACK');
   }
 }

@@ -1,6 +1,8 @@
 <button (click)="logWeather()">
   getWeather
 </button>
+<p>Current Temperature: {{weatherData?.currently.temperature | number:'1.1-1'}} °C</p>
+<p>Summary: {{weatherData?.currently.summary}}</p>
 <!--
 <div class="icon sun-shower">
   <div class="cloud"></div>
@@ -40,5 +42,5 @@
 <div class="icon rainy">
   <div class="cloud"></div>
   <div class="rain"></div>
-</div>-->
-
+</div>
+-->
