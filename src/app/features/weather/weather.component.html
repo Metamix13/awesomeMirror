@@ -52,7 +52,7 @@
   </h1>
 </div>
 <div class="row mx-auto">
-  <h4>{{weatherData?.currently.summary}}</h4>
+  <h5>{{weatherData?.currently.summary}}</h5>
 </div>
 <div class="row mx-auto">
   <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
@@ -60,22 +60,23 @@
   hot: weatherData?.currently.apparentTemperature >= 25,
   cold: weatherData?.currently.apparentTemperature <= 17,
   warm: weatherData?.currently.apparentTemperature > 17 && weatherData?.currently.apparentTemperature < 25 }">
-    {{weatherData?.currently.apparentTemperature | number:'1.1-1'}}°</h5>
+     {{weatherData?.currently.apparentTemperature | number:'1.1-1'}}°</h5>
 </div>
 
 <div class="row mx-auto">
   <i class="fa fa-tint" aria-hidden="true"></i>
-  <h5>{{weatherData?.currently.humidity | percent}} Humidity</h5>
+  <h5> {{weatherData?.currently.precipProbability | percent}} Chance of rain</h5>
+</div>
+<div class="row mx-auto">
+  <i class="fa fa-tint" aria-hidden="true"></i>
+  <i class="fa fa-cloud" aria-hidden="true"></i>
+  <h5> {{weatherData?.currently.humidity | percent}} Humidity</h5>
 </div>
 <div class="row mx-auto">
   <i class="fa fa-sun-o" aria-hidden="true"></i>
-  <h5>{{weatherData?.currently.uvIndex}} UV Index</h5>
+  <h5> {{weatherData?.currently.uvIndex}} UV Index</h5>
 </div>
 <div class="row mx-auto">
   <i class="fa fa-ioxhost" aria-hidden="true"></i>
-  <h5>{{weatherData?.currently.windSpeed}} Wind Speed</h5>
+  <h5> {{weatherData?.currently.windSpeed}} Km/h Wind Speed</h5>
 </div>
-
-<button (click)="logWeather()">
-  getWeather
-</button>

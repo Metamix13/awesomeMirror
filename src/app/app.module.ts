@@ -19,6 +19,7 @@ import { DateComponent } from './features/date/date.component';
 import {WeatherService} from './shared/weather.service';
 import {HttpClientModule} from '@angular/common/http';
 import {JsonpModule} from '@angular/http';
+import { WeatherForecastHourlyComponent } from './features/weather-forecast-hourly/weather-forecast-hourly.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {JsonpModule} from '@angular/http';
     DashboardComponent,
     ClockComponent,
     WeatherComponent,
-    DateComponent
+    DateComponent,
+    WeatherForecastHourlyComponent
   ],
   imports: [
     BrowserModule,

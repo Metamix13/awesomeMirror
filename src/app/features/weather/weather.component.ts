@@ -25,8 +25,4 @@ export class WeatherComponent implements OnInit {
   getForecast() {
     this.weatherService.currentForecast(this.lat, this.lng).subscribe(data => this.weatherData = data.json());
   }
-
-  logWeather(){
-    console.log(this.weatherData);
-  }
 }
