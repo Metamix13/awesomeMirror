@@ -1,6 +1,48 @@
-<button (click)="logWeather()">
-  getWeather
-</button>
+<div class="card-img-top">
+  <div class="icon sunny"
+       *ngIf="weatherData?.currently.icon === 'clear-day' ||
+      weatherData?.currently.icon === 'clear-night'">
+    <div class="sun">
+      <div class="rays"></div>
+    </div>
+  </div>
+
+  <div class="icon cloudy"
+       *ngIf="weatherData?.currently.icon === 'partly-cloudy-day' ||
+      weatherData?.currently.icon === 'partly-cloudy-night' ||
+       weatherData?.currently.icon === 'cloudy' ||
+       weatherData?.currently.icon === 'wind' ||
+        weatherData?.currently.icon === 'fog'">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+  </div>
+
+
+  <div class="icon thunder-storm"
+       *ngIf="weatherData?.currently.icon === 'thunderstorm' ">
+    <div class="cloud"></div>
+    <div class="lightning">
+      <div class="bolt"></div>
+      <div class="bolt"></div>
+    </div>
+  </div>
+
+  <div class="icon flurries"
+       *ngIf="weatherData?.currently.icon === 'hail' ||
+      weatherData?.currently.icon === 'snow' " >
+    <div class="cloud"></div>
+    <div class="snow">
+      <div class="flake"></div>
+      <div class="flake"></div>
+    </div>
+  </div>
+
+  <div class="icon rainy" *ngIf="weatherData?.currently.icon === 'rain' ">
+    <div class="cloud"></div>
+    <div class="rain"></div>
+  </div>
+</div>
+
 <div class="row mx-auto">
   <h1 [ngClass]="{
   hot: weatherData?.currently.temperature >= 25,
@@ -10,73 +52,30 @@
   </h1>
 </div>
 <div class="row mx-auto">
-  <p>{{weatherData?.currently.summary}}</p>
+  <h4>{{weatherData?.currently.summary}}</h4>
 </div>
 <div class="row mx-auto">
-  <h4 [ngClass]="{
+  <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+  <h5 [ngClass]="{
   hot: weatherData?.currently.apparentTemperature >= 25,
   cold: weatherData?.currently.apparentTemperature <= 17,
   warm: weatherData?.currently.apparentTemperature > 17 && weatherData?.currently.apparentTemperature < 25 }">
-    {{weatherData?.currently.apparentTemperature | number:'1.1-1'}}°</h4>
+    {{weatherData?.currently.apparentTemperature | number:'1.1-1'}}°</h5>
 </div>
 
 <div class="row mx-auto">
-  <p>Humidity: {{weatherData?.currently.humidity}}</p>
+  <i class="fa fa-tint" aria-hidden="true"></i>
+  <h5>{{weatherData?.currently.humidity | percent}} Humidity</h5>
 </div>
 <div class="row mx-auto">
-  <p>UV Index: {{weatherData?.currently.uvIndex}}</p>
+  <i class="fa fa-sun-o" aria-hidden="true"></i>
+  <h5>{{weatherData?.currently.uvIndex}} UV Index</h5>
 </div>
 <div class="row mx-auto">
-  <p>Wind Speed: {{weatherData?.currently.windSpeed}}</p>
+  <i class="fa fa-ioxhost" aria-hidden="true"></i>
+  <h5>{{weatherData?.currently.windSpeed}} Wind Speed</h5>
 </div>
 
-
-
-
-
-
-
-
-
-
-<!--
-<div class="icon sun-shower">
-<div class="cloud"></div>
-<div class="sun">
-  <div class="rays"></div>
-</div>
-<div class="rain"></div>
-</div>
-
-<div class="icon thunder-storm">
-<div class="cloud"></div>
-<div class="lightning">
-  <div class="bolt"></div>
-  <div class="bolt"></div>
-</div>
-</div>
-
-<div class="icon cloudy">
-<div class="cloud"></div>
-<div class="cloud"></div>
-</div>
-
-<div class="icon flurries">
-<div class="cloud"></div>
-<div class="snow">
-  <div class="flake"></div>
-  <div class="flake"></div>
-</div>
-</div>
-
-<div class="icon sunny">
-<div class="sun">
-  <div class="rays"></div>
-</div>
-</div>
-
-<div class="icon rainy">
-<div class="cloud"></div>
-<div class="rain"></div>
-</div>
--->
+<button (click)="logWeather()">
+  getWeather
+</button>
