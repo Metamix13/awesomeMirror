@@ -3,6 +3,18 @@ html *,
 html *:before,
 html *:after { box-sizing: inherit; }
 
+h1.warm{
+  color: #dd7200;
+}
+
+h1.hot{
+  color: #c40122;
+}
+
+h1.cold{
+ color: #009ece;
+}
+
 
 .icon {
   position: relative;
