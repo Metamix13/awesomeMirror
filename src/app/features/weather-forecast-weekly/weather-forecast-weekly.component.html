@@ -1,0 +1,60 @@
+<div class="card-group">
+  <div class="card text-center" *ngFor="let day of weatherService.weatherData?.daily.data | slice:1:8">
+    <h5 class="card-title">{{day?.time * 1000 | date:'EEEE'}}</h5>
+    <div class="card-img-top">
+      <div class="icon sunny"
+           *ngIf="day.icon === 'clear-day' ||
+      day.icon === 'clear-night'">
+        <div class="sun">
+          <div class="rays"></div>
+        </div>
+      </div>
+
+      <div class="icon cloudy"
+           *ngIf="day.icon === 'partly-cloudy-day' ||
+      day.icon === 'partly-cloudy-night' ||
+       day.icon === 'cloudy' ||
+       day.icon === 'wind' ||
+        day.icon === 'fog'">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </div>
+
+
+      <div class="icon thunder-storm"
+           *ngIf="day.icon === 'thunderstorm' ">
+        <div class="cloud"></div>
+        <div class="lightning">
+          <div class="bolt"></div>
+          <div class="bolt"></div>
+        </div>
+      </div>
+
+      <div class="icon flurries"
+           *ngIf="day.icon === 'hail' ||
+      day.icon === 'snow' " >
+        <div class="cloud"></div>
+        <div class="snow">
+          <div class="flake"></div>
+          <div class="flake"></div>
+        </div>
+      </div>
+
+      <div class="icon rainy" *ngIf="day.icon === 'rain' ">
+        <div class="cloud"></div>
+        <div class="rain"></div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+      <h5 [ngClass]="{
+          hot: day?.temperatureHigh >= 25,
+          cold: day?.temperatureHigh <= 17,
+          warm: day?.temperatureHigh > 17 && day?.temperatureHigh < 25 }">
+        {{day?.temperatureHigh | number:'1.1-1'}}°</h5>
+      <i class="fa fa-tint" aria-hidden="true"></i>
+      <h5>{{day?.precipProbability | percent}}</h5>
+    </div>
+  </div>
+</div>

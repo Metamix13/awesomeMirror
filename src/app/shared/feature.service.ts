@@ -17,8 +17,8 @@ export class FeatureService {
       new Feature('clock','This is a simple clock', false),
       new Feature('date', 'This is a date plugin', false),
       new Feature('weather','This is a weather plugin', false),
-      new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', false)
-
+      new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', false),
+      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', false)
     ];
 
     this.setDefaultPositions();
@@ -78,8 +78,12 @@ export class FeatureService {
           feature.yPos = 20;
           break;
         case "weather-forecast-hourly":
-          feature.xPos = 500;
+          feature.xPos = 600;
           feature.yPos = 600;
+          break;
+        case "weather-forecast-weekly":
+          feature.xPos = -10;
+          feature.yPos = 1000;
           break;
       }
 

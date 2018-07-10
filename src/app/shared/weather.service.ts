@@ -8,9 +8,18 @@ export class WeatherService {
 
   readonly ROOT_URL = 'https://api.darksky.net/forecast/ec64c27b79a3ec0e658131bf59e28fff/';
 
-  constructor(private jsonp: Jsonp) { }
+  weatherData: object;
 
-  currentForecast(lat: string, lng: string): Observable<any> {
+  constructor(private jsonp: Jsonp) {
+    this.getData();
+  }
+
+  getCurrentForecastFromDarkSky(lat: string, lng: string): Observable<any> {
     return this.jsonp.request(this.ROOT_URL + lat + ',' + lng + '?lang=de&units=si&callback=JSONP_CALLBACK');
   }
+
+  getData(){
+    this.getCurrentForecastFromDarkSky('52.269760','10.515661').subscribe(data => this.weatherData = data.json());
+  }
+
 }

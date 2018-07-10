@@ -20,6 +20,7 @@ import {WeatherService} from './shared/weather.service';
 import {HttpClientModule} from '@angular/common/http';
 import {JsonpModule} from '@angular/http';
 import { WeatherForecastHourlyComponent } from './features/weather-forecast-hourly/weather-forecast-hourly.component';
+import { WeatherForecastWeeklyComponent } from './features/weather-forecast-weekly/weather-forecast-weekly.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { WeatherForecastHourlyComponent } from './features/weather-forecast-hour
     ClockComponent,
     WeatherComponent,
     DateComponent,
-    WeatherForecastHourlyComponent
+    WeatherForecastHourlyComponent,
+    WeatherForecastWeeklyComponent
   ],
   imports: [
     BrowserModule,

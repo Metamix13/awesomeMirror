@@ -1,5 +1,5 @@
 <div class="card-group">
-  <div class="card text-center" *ngFor="let hour of weatherData | slice:1:7">
+  <div class="card text-center" *ngFor="let hour of weatherService.weatherData?.hourly.data | slice:1:7">
       <img class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">{{hour?.time * 1000 | date:'H'}} <small>{{hour?.time * 1000 | date:'a'}}</small></h5>
@@ -8,14 +8,14 @@
           hot: hour?.temperature >= 25,
           cold: hour?.temperature <= 17,
           warm: hour?.temperature > 17 && hour?.temperature < 25 }">
-          {{hour?.temperature | number:'1.1-1'}}°</p>
+          {{hour?.temperature | number:'1.1-1'}}°</p><br>
         <i class="fa fa-tint" aria-hidden="true"></i>
         <p>{{hour?.precipProbability | percent}}</p>
       </div>
     </div>
 </div>
 <div class="card-group">
-  <div class="card text-center" *ngFor="let hour of weatherData | slice:7:13">
+  <div class="card text-center" *ngFor="let hour of weatherService.weatherData?.hourly.data | slice:7:13">
     <img class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">{{hour?.time * 1000 | date:'H'}} <small>{{hour?.time * 1000 | date:'a'}}</small></h5>
@@ -24,7 +24,7 @@
           hot: hour?.temperature >= 25,
           cold: hour?.temperature <= 17,
           warm: hour?.temperature > 17 && hour?.temperature < 25 }">
-        {{hour?.temperature | number:'1.1-1'}}°</p>
+        {{hour?.temperature | number:'1.1-1'}}°</p><br>
       <i class="fa fa-tint" aria-hidden="true"></i>
       <p>{{hour?.precipProbability | percent}}</p>
     </div>
