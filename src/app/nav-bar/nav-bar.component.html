@@ -15,11 +15,11 @@
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
            aria-expanded="false">Control <span class="caret"></span></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLink]="['/config']">Configuration</a>
-          <a class="dropdown-item" (click)="featureService.resizeFeatures()">Resize Features</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLink]="['/config']"><i class="fa fa-cogs" aria-hidden="true"></i> Configuration</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore" aria-hidden="true"></i> Set default positions</a>
+          <a class="dropdown-item" (click)="featureService.savePosition()"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save custom positions</a>
+          <a class="dropdown-item" [ngClass]="{'disabled':featureService.savedPositions.length === 0}" (click)="featureService.arrangeWithSavedPositions()"><i class="fa fa-bookmark-o" aria-hidden="true"></i> Apply custom positions</a>
         </div>
       </li>
     </ul>

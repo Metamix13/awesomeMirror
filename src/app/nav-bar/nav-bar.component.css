@@ -3,4 +3,16 @@
   opacity: 0.3;
 }
 
+.dropdown-item{
+  cursor: pointer;
+}
 
+.dropdown-item-text{
+  cursor: default;
+}
+
+
+.disabled{
+  pointer-events: none;
+  color: gray !important;
+}
