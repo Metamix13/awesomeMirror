@@ -9,6 +9,11 @@
       <div class="card-header" [hidden]="viewModeService.viewMode">
         {{feature.name}}
           <i class="fa fa-arrows-alt pull-right" #handler ></i>
+        <a class="dropdown-toggle pull-right" data-toggle="dropdown-menu" role="button" aria-haspopup="true"
+           aria-expanded="false"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+        <div class="dropdown-menu">
+          <p class="dropdown-item">test</p>
+        </div>
       </div>
       <div class="card-body">
         <div ngSwitch="{{feature.name}}">

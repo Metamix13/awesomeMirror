@@ -21,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {JsonpModule} from '@angular/http';
 import { WeatherForecastHourlyComponent } from './features/weather-forecast-hourly/weather-forecast-hourly.component';
 import { WeatherForecastWeeklyComponent } from './features/weather-forecast-weekly/weather-forecast-weekly.component';
+import { WeatherConfComponent } from './features/weather/weather-conf/weather-conf.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { WeatherForecastWeeklyComponent } from './features/weather-forecast-week
     WeatherComponent,
     DateComponent,
     WeatherForecastHourlyComponent,
-    WeatherForecastWeeklyComponent
+    WeatherForecastWeeklyComponent,
+    WeatherConfComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ export class WeatherService {
   readonly ROOT_URL = 'https://api.darksky.net/forecast/ec64c27b79a3ec0e658131bf59e28fff/';
 
   weatherData: object;
+  lat: string;
+  lng: string;
 
   constructor(private jsonp: Jsonp) {
     this.getData();
