@@ -22,10 +22,11 @@
         Longitude is required!
       </div>
     </div>
+    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">View Google Maps for Coordinates</a>
 
     <button type="submit" class="btn btn-success"
             (click)="weatherService.getData(weatherService.lat, weatherService.lng)"
-            [disabled]="!coordinateForm.form.valid">Submit
+            [disabled]="!coordinateForm.form.valid">Save
     </button>
   </form>
 </div>
