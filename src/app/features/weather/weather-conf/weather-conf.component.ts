@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WeatherService} from "../../../shared/weather.service";
 
 @Component({
   selector: 'app-weather-conf',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherConfComponent implements OnInit {
 
-  constructor() { }
+  constructor(public weatherService: WeatherService) { }
+
 
   ngOnInit() {
   }
+
+  onSubmit(){
+}
 
 }

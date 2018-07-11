@@ -1,29 +1,39 @@
 <div class="container">
-    <div class="card"
-         *ngFor="let feature of localFeatureList"
-         ngDraggable
-         [handle]="handler"
-         [position]="{x: feature.xPos, y: feature.yPos}"
-         (endOffset)="onMoveEnd(feature, $event)"
-          [ngClass]="{'border-light': viewModeService.viewMode}">
-      <div class="card-header" [hidden]="viewModeService.viewMode">
-        {{feature.name}}
-          <i class="fa fa-arrows-alt pull-right" #handler ></i>
-        <a class="dropdown-toggle pull-right" data-toggle="dropdown-menu" role="button" aria-haspopup="true"
-           aria-expanded="false"><i class="fa fa-cogs" aria-hidden="true"></i></a>
-        <div class="dropdown-menu">
-          <p class="dropdown-item">test</p>
+  <div class="card"
+       *ngFor="let feature of localFeatureList"
+       ngDraggable
+       [handle]="handler"
+       [position]="{x: feature.xPos, y: feature.yPos}"
+       (endOffset)="onMoveEnd(feature, $event)"
+       [ngClass]="{'border-light': viewModeService.viewMode}">
+    <div class="card-header" [hidden]="viewModeService.viewMode">
+      {{feature.name}}
+      <i class="fa fa-arrows-alt pull-right" #handler></i>
+      <div class="dropdown show">
+        <a  class="pull-right" id="dropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true"
+           aria-expanded="false"><i class="fa fa-cogs pull-right" aria-hidden="true"></i></a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+          <div ngSwitch="{{feature.name}}">
+            <!--<app-clock *ngSwitchCase="'clock'"></app-clock>
+            <app-date *ngSwitchCase="'date'"></app-date> -->
+            <app-weather-conf *ngSwitchCase="'weather'"></app-weather-conf>
+            <!--
+            <app-weather-forecast-hourly *ngSwitchCase="'weather-forecast-hourly'"></app-weather-forecast-hourly>
+            <app-weather-forecast-weekly *ngSwitchCase="'weather-forecast-weekly'"></app-weather-forecast-weekly>
+            -->
+          </div>
         </div>
       </div>
-      <div class="card-body">
-        <div ngSwitch="{{feature.name}}">
-          <app-clock *ngSwitchCase="'clock'"></app-clock>
-          <app-date *ngSwitchCase="'date'"></app-date>
-          <app-weather *ngSwitchCase="'weather'"></app-weather>
-          <app-weather-forecast-hourly *ngSwitchCase="'weather-forecast-hourly'"></app-weather-forecast-hourly>
-          <app-weather-forecast-weekly *ngSwitchCase="'weather-forecast-weekly'" ></app-weather-forecast-weekly>
-        </div>
+    </div>
+    <div class="card-body">
+      <div ngSwitch="{{feature.name}}">
+        <app-clock *ngSwitchCase="'clock'"></app-clock>
+        <app-date *ngSwitchCase="'date'"></app-date>
+        <app-weather *ngSwitchCase="'weather'"></app-weather>
+        <app-weather-forecast-hourly *ngSwitchCase="'weather-forecast-hourly'"></app-weather-forecast-hourly>
+        <app-weather-forecast-weekly *ngSwitchCase="'weather-forecast-weekly'"></app-weather-forecast-weekly>
       </div>
+    </div>
   </div>
 </div>
 

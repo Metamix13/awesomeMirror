@@ -13,15 +13,17 @@ export class WeatherService {
   lng: string;
 
   constructor(private jsonp: Jsonp) {
-    this.getData();
+    this.lat = '52.269760';
+    this.lng = '10.515661';
+    this.getData(this.lat, this.lng);
   }
 
   getCurrentForecastFromDarkSky(lat: string, lng: string): Observable<any> {
     return this.jsonp.request(this.ROOT_URL + lat + ',' + lng + '?lang=de&units=si&callback=JSONP_CALLBACK');
   }
 
-  getData(){
-    this.getCurrentForecastFromDarkSky('52.269760','10.515661').subscribe(data => this.weatherData = data.json());
+  getData(lat: string, lng: string){
+    this.getCurrentForecastFromDarkSky(lat,lng).subscribe(data => this.weatherData = data.json());
   }
 
 }

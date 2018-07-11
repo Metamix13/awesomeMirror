@@ -5,3 +5,7 @@
 .fa-arrows-alt {
   cursor: move;
 }
+
+.dropdown {
+  display:inline;
+}
