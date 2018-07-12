@@ -1,0 +1,13 @@
+<div class="container">
+  <form #clockForm="ngForm">
+    <div class="form-group">
+      <label for="formatDate">Date Format</label>
+      <select class="form-control" id="formatDate"
+              required
+              [(ngModel)]="formatService.formatDate" name="formatDate"
+              #power="ngModel">
+        <option *ngFor="let format of formatService.posDateFormats" [value]="format">{{format}}</option>
+      </select>
+    </div>
+  </form>
+</div>

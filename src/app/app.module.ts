@@ -24,6 +24,7 @@ import { WeatherForecastWeeklyComponent } from './features/weather-forecast-week
 import { WeatherConfComponent } from './features/weather/weather-conf/weather-conf.component';
 import { ClockConfComponent } from './features/clock/clock-conf/clock-conf.component';
 import {FormatService} from './shared/format.service';
+import { DateConfigComponent } from './features/date/date-config/date-config.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {FormatService} from './shared/format.service';
     WeatherForecastHourlyComponent,
     WeatherForecastWeeklyComponent,
     WeatherConfComponent,
-    ClockConfComponent
+    ClockConfComponent,
+    DateConfigComponent
   ],
   imports: [
     BrowserModule,

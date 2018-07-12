@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormatService} from '../../shared/format.service';
 
 @Component({
   selector: 'app-date',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateComponent implements OnInit {
 
-  constructor() {
+  constructor(public formatService:FormatService) {
     setInterval(() => this.setDate(),1000)
   }
   date:number;
