@@ -6,6 +6,10 @@
   cursor: move;
 }
 
+.fa-cogs{
+  cursor: pointer;
+}
+
 .dropdown {
   display:inline;
 }
