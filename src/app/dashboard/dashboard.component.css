@@ -14,6 +14,11 @@
   cursor: pointer;
 }
 
+i{
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
 .dropdown {
   display:inline;
 }
