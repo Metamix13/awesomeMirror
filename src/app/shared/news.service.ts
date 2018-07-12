@@ -18,7 +18,7 @@ export class NewsService {
   }
 
   getCurrentNewsFromNewsAPI(country:string):Observable<any>{
-    return this.http.get(this.ROOT_URL + 'country=' + this.country + '&apiKey=' + this.API_KEY);
+    return this.http.get(this.ROOT_URL + 'country=' + country + '&apiKey=' + this.API_KEY);
   }
 
   getData(country:string){
