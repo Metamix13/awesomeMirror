@@ -14,11 +14,11 @@ export class FeatureService {
   constructor() {
     this.savedPositions = [];
     this.featureList = [
-      new Feature('clock','This is a simple clock', false),
-      new Feature('date', 'This is a date plugin', false),
-      new Feature('weather','This is a weather plugin', false),
-      new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', false),
-      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', false)
+      new Feature('clock','This is a simple clock', true),
+      new Feature('date', 'This is a date plugin', true),
+      new Feature('weather','This is a weather plugin', true),
+      new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', true),
+      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', true)
     ];
 
     this.setDefaultPositions();
@@ -26,6 +26,11 @@ export class FeatureService {
 
   getFeatures(){
     return Observable.of(this.featureList);
+  }
+
+  changeShown(featureName:string, shown:boolean){
+    let index = _.findIndex(this.featureList, ['name',featureName]);
+    this.featureList[index].shown = shown;
   }
 
   /*

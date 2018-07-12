@@ -10,6 +10,10 @@
   cursor: pointer;
 }
 
+.fa-times{
+  cursor: pointer;
+}
+
 .dropdown {
   display:inline;
 }

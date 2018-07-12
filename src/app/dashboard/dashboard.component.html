@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" *ngFor="let feature of localFeatureList">
   <div class="card"
-       *ngFor="let feature of localFeatureList"
+       *ngIf="feature.shown"
        ngDraggable
        [handle]="handler"
        [position]="{x: feature.xPos, y: feature.yPos}"
@@ -8,6 +8,7 @@
        [ngClass]="{'border-light': viewModeService.viewMode}">
     <div class="card-header" [hidden]="viewModeService.viewMode">
       {{feature.name}}
+      <i (click)="featureService.changeShown(feature.name,false)" class="fa fa-times pull-right" aria-hidden="true"></i>
       <i class="fa fa-arrows-alt pull-right" #handler></i>
       <div class="dropdown show">
         <a  class="pull-right" id="dropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -22,6 +23,7 @@
           </div>
         </div>
       </div>
+
     </div>
     <div class="card-body">
       <div ngSwitch="{{feature.name}}">

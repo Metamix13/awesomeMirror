@@ -1,25 +1,47 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!viewModeService.viewMode">
   <div class="container">
-    <button class="btn btn-light" (click)="viewModeService.changeViewMode(true)"><i class="fa fa-sign-in" aria-hidden="true"></i> View Mode</button>
     <!--Navbar left Content-->
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/dashboard']"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</a></li>
-      </ul>
-    </div>
+    <button class="btn btn-light" (click)="viewModeService.changeViewMode(true)"><i class="fa fa-sign-in"
+                                                                                    aria-hidden="true"></i> View Mode
+    </button>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <button class="btn btn-light dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> Add Feature
+        </button>
+        <div class="dropdown-menu" aria-labelledby="addDropdown">
+          <div *ngFor="let feature of featureService.featureList">
+            <div class="dropdown-item" *ngIf="!feature.shown" (click)="feature.shown = !feature.shown">
+              {{feature.name}}
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
     <!--Navbar right content-->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/about']"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+      <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/dashboard']"><i
+        class="fa fa-th-large" aria-hidden="true"></i> Dashboard</a></li>
+      <li class="nav-item" [routerLinkActive]="['active']"><a class="nav-link" [routerLink]="['/about']"><i
+        class="fa fa-info-circle" aria-hidden="true"></i> About</a>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
            aria-expanded="false"><i class="fa fa-cogs" aria-hidden="true"></i> Control <span class="caret"></span></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLink]="['/config']"><i class="fa fa-cogs" aria-hidden="true"></i> Configuration</a>
+          <a class="dropdown-item" [routerLinkActive]="['active']" [routerLink]="['/config']"><i class="fa fa-cogs"
+                                                                                                 aria-hidden="true"></i>
+            Configuration</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore" aria-hidden="true"></i> Set default positions</a>
-          <a class="dropdown-item" (click)="featureService.savePosition()"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save custom positions</a>
-          <a class="dropdown-item" [ngClass]="{'disabled':featureService.savedPositions.length === 0}" (click)="featureService.arrangeWithSavedPositions()"><i class="fa fa-bookmark-o" aria-hidden="true"></i> Apply custom positions</a>
+          <a class="dropdown-item" (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore"
+                                                                                     aria-hidden="true"></i> Set default
+            positions</a>
+          <a class="dropdown-item" (click)="featureService.savePosition()"><i class="fa fa-floppy-o"
+                                                                              aria-hidden="true"></i> Save custom
+            positions</a>
+          <a class="dropdown-item" [ngClass]="{'disabled':featureService.savedPositions.length === 0}"
+             (click)="featureService.arrangeWithSavedPositions()"><i class="fa fa-bookmark-o" aria-hidden="true"></i>
+            Apply custom positions</a>
         </div>
       </li>
     </ul>
