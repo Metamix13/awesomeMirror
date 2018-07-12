@@ -22,6 +22,8 @@ import {JsonpModule} from '@angular/http';
 import { WeatherForecastHourlyComponent } from './features/weather-forecast-hourly/weather-forecast-hourly.component';
 import { WeatherForecastWeeklyComponent } from './features/weather-forecast-weekly/weather-forecast-weekly.component';
 import { WeatherConfComponent } from './features/weather/weather-conf/weather-conf.component';
+import { ClockConfComponent } from './features/clock/clock-conf/clock-conf.component';
+import {FormatService} from './shared/format.service';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { WeatherConfComponent } from './features/weather/weather-conf/weather-co
     DateComponent,
     WeatherForecastHourlyComponent,
     WeatherForecastWeeklyComponent,
-    WeatherConfComponent
+    WeatherConfComponent,
+    ClockConfComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { WeatherConfComponent } from './features/weather/weather-conf/weather-co
   providers: [
     FeatureService,
     ViewModeService,
-  WeatherService],
+    WeatherService,
+    FormatService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

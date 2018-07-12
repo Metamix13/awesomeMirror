@@ -14,7 +14,5 @@ export class WeatherConfComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(){
-}
 
 }

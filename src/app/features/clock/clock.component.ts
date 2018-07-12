@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormatService} from '../../shared/format.service';
 
 @Component({
   selector: 'app-clock',
@@ -6,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clock.component.css']
 })
 export class ClockComponent implements OnInit {
-  constructor() {
-    setInterval(() => this.setTime(),1000)
-  }
   time: number;
 
+  constructor(public formatService:FormatService) {
+    setInterval(() => this.setTime(),1000)
+  }
+
   ngOnInit() {
+
   }
 
   setTime(){

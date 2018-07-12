@@ -1,0 +1,27 @@
+<div class="container">
+  <form #clockForm="ngForm">
+    <div class="form-group">
+      <label for="formatTime">Time Format</label>
+      <select class="form-control" id="formatTime"
+              required
+              [(ngModel)]="formatService.formatTime" name="formatTime"
+              #power="ngModel">
+        <option *ngFor="let format of formatService.posTimeFormats" [value]="format">{{format}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+    <label for="showSecPart">Show secondary Part:
+      <input type="checkbox" [(ngModel)]="formatService.showSecSeperate" id="showSecPart" name="ngModel">
+    </label>
+    </div>
+    <div class="form-group" [hidden]="!formatService.showSecSeperate">
+      <label for="formatSec">Sec Format</label>
+      <select class="form-control" id="formatSec"
+              required
+              [(ngModel)]="formatService.formatSec" name="formatSec"
+              #power="ngModel">
+        <option *ngFor="let format of formatService.posSecTimeFormats" [value]="format">{{format}}</option>
+      </select>
+    </div>
+  </form>
+</div>

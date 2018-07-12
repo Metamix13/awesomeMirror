@@ -71,7 +71,7 @@ export class FeatureService {
           break;
         case "date":
           feature.xPos = 10;
-          feature.yPos = 220;
+          feature.yPos = 420;
           break;
         case "weather":
           feature.xPos = 900;

@@ -14,7 +14,8 @@
            aria-expanded="false"><i class="fa fa-cogs pull-right" aria-hidden="true"></i></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
           <div ngSwitch="{{feature.name}}">
-            <!--<app-clock *ngSwitchCase="'clock'"></app-clock>
+            <app-clock-conf *ngSwitchCase="'clock'"></app-clock-conf>
+            <!--
             <app-date *ngSwitchCase="'date'"></app-date> -->
             <app-weather-conf *ngSwitchCase="'weather'"></app-weather-conf>
             <app-weather-conf *ngSwitchCase="'weather-forecast-hourly'"></app-weather-conf>
