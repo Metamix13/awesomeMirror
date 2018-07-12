@@ -8,10 +8,12 @@ export class NewsService {
   readonly API_KEY = 'd8f91ac4e70f4825b767c6d9a9f52337';
 
   country: string;
+  posCountries: string[];
   news: object;
 
   constructor(private http:HttpClient){
     this.country = 'de';
+    this.posCountries = ['us', 'de'];
     this.getData(this.country);
     //Get new Data every hour
     setInterval(() => this.getData(this.country),1000 * 60 * 60);

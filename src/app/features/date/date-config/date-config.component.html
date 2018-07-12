@@ -12,7 +12,7 @@
       <select class="form-control" id="formatDate"
               required
               [(ngModel)]="formatService.formatDate" name="formatDate"
-              #power="ngModel">
+              #name="ngModel">
         <option *ngFor="let format of formatService.posDateFormats" [value]="format">{{format}}</option>
       </select>
     </div>

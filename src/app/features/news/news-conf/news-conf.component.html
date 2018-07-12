@@ -1,3 +1,13 @@
-<p>
-  news-conf works!
-</p>
+<div class="container">
+  <form #newsForm="ngForm">
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select class="form-control" id="country"
+              required
+              [(ngModel)]="newsService.country" name="country"
+              #country="ngModel">
+        <option *ngFor="let country of newsService.posCountries" [value]="country">{{country}}</option>
+      </select>
+    </div>
+  </form>
+</div>
