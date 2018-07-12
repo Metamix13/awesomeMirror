@@ -16,6 +16,8 @@ export class WeatherService {
     this.lat = '52.269760';
     this.lng = '10.515661';
     this.getData(this.lat, this.lng);
+    //Get new Data every hour
+    setInterval(() => this.getData(this.lat, this.lng),1000 * 60 * 60);
   }
 
   getCurrentForecastFromDarkSky(lat: string, lng: string): Observable<any> {

@@ -13,6 +13,8 @@ export class NewsService {
   constructor(private http:HttpClient){
     this.country = 'de';
     this.getData(this.country);
+    //Get new Data every hour
+    setInterval(() => this.getData(this.country),1000 * 60 * 60);
   }
 
   getCurrentNewsFromNewsAPI(country:string):Observable<any>{
