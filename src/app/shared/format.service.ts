@@ -12,7 +12,7 @@ export class FormatService{
 
   constructor(){
     this.showSecSeperate = true;
-    this.formatTime = 'h:mm';
+    this.formatTime = 'hh:mm';
     this.formatSec = ':ss';
     this.formatDate = 'fullDate';
     this.posTimeFormats = ['h','hh','H','HH','m','mm','s','ss','h:mm','hh:mm','hh:mm:ss'];
