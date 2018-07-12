@@ -1,6 +1,13 @@
 <div class="container">
   <form #clockForm="ngForm">
     <div class="form-group">
+      <label for="dateSize">Font Size</label>
+      <input type="number" class="form-control" id="dateSize"
+             required
+             [(ngModel)]="formatService.dateFontSize" name="dateSize"
+             #name="ngModel">
+    </div>
+    <div class="form-group">
       <label for="formatDate">Date Format</label>
       <select class="form-control" id="formatDate"
               required
