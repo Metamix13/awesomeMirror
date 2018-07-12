@@ -18,7 +18,8 @@ export class FeatureService {
       new Feature('date', 'This is a date plugin', true),
       new Feature('weather','This is a weather plugin', true),
       new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', true),
-      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', true)
+      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', true),
+      new Feature('news', 'This is a news plugin', true)
     ];
 
     this.setDefaultPositions();
@@ -89,6 +90,10 @@ export class FeatureService {
         case "weather-forecast-weekly":
           feature.xPos = -10;
           feature.yPos = 1000;
+          break;
+        case "news":
+          feature.xPos = 10;
+          feature.yPos = 700;
           break;
       }
 
