@@ -8,7 +8,13 @@ import {ConfigService} from "../shared/config.service";
 })
 export class ConfigPageComponent implements OnInit {
 
-  constructor(public configService:ConfigService) { }
+  newsAPIKeyShown:boolean;
+  darkSkyAPIKeyShown:boolean;
+
+  constructor(public configService:ConfigService) {
+    this.newsAPIKeyShown = false;
+    this.darkSkyAPIKeyShown = false;
+  }
 
   ngOnInit() {
   }

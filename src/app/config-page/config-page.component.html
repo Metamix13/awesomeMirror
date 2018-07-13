@@ -20,23 +20,27 @@
       <p>To configure the technical data from the project.</p>
       <div class="form-group">
         <label for="newsAPIKEY">News API Key</label>
-      <input type="text" class="form-control" id="newsAPIKEY"
-             required
-             [(ngModel)]="configService.newsAPIKey" name="newsAPIKEY"
-             #name="ngModel">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+          <input [type]="newsAPIKeyShown ? 'text' : 'password'" class="form-control" id="newsAPIKEY"
+                 required
+                 [(ngModel)]="configService.newsAPIKey" name="newsAPIKEY"
+                 #name="ngModel">
+          <span class="input-group-text" (click)="newsAPIKeyShown = !newsAPIKeyShown" id="basic-addon3"><i [class]="newsAPIKeyShown ? 'fa fa-eye-slash' : 'fa fa-eye'" aria-hidden="true"></i></span>
+        </div>
+
       </div>
       <div class="form-group">
         <label for="darkSkyAPIKey">Dark Sky API Key</label>
-        <input type="text" class="form-control" id="darkSkyAPIKey"
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2"><i class="fa fa-key" aria-hidden="true"></i></span>
+        <input [type]="darkSkyAPIKeyShown ? 'text' : 'password'" class="form-control" id="darkSkyAPIKey"
                required
                [(ngModel)]="configService.darkSkyAPIKey" name="darkSkyAPIKey"
                #name="ngModel">
+          <span class="input-group-text" (click)="darkSkyAPIKeyShown = !darkSkyAPIKeyShown" id="basic-addon4"><i [class]="darkSkyAPIKeyShown ? 'fa fa-eye-slash' : 'fa fa-eye'" aria-hidden="true"></i></span>
+        </div>
       </div>
     </div>
   </div>
-
-
-
-
-
 </div>
