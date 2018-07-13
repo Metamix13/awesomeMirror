@@ -7,7 +7,6 @@ import {AppComponent} from './app.component';
 import {ConfigPageComponent} from './config-page/config-page.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {AboutPageComponent} from './about-page/about-page.component';
-import {ContactPageComponent} from './contact-page/contact-page.component';
 import {AppRoutingModule} from './routing/app-routing.module';
 import {ClockComponent} from './features/clock/clock.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -36,7 +35,6 @@ import { NewsConfComponent } from './features/news/news-conf/news-conf.component
     ConfigPageComponent,
     NavBarComponent,
     AboutPageComponent,
-    ContactPageComponent,
     DashboardComponent,
     ClockComponent,
     WeatherComponent,
