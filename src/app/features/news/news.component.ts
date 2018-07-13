@@ -18,7 +18,6 @@ export class NewsComponent implements OnInit {
     this.interval = 30;
     this.actNews = new News();
     this.newsService.getCurrentNewsFromNewsAPI(this.newsService.country).subscribe(obs => this.startInterval());
-
   }
 
   ngOnInit() {

@@ -9,5 +9,9 @@
         <option *ngFor="let country of newsService.posCountries" [value]="country">{{country}}</option>
       </select>
     </div>
+    <button type="submit" class="btn btn-success"
+            (click)="newsService.getData(newsService.country)"
+            >Apply
+    </button>
   </form>
 </div>
