@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {FormatService} from '../../../shared/format.service';
 
 @Component({
-  selector: 'app-date-config',
-  templateUrl: './date-config.component.html',
-  styleUrls: ['./date-config.component.css']
+  selector: 'app-date-conf',
+  templateUrl: './date-conf.component.html',
+  styleUrls: ['./date-conf.component.css']
 })
-export class DateConfigComponent implements OnInit {
+export class DateConfComponent implements OnInit {
 
   constructor(public formatService:FormatService) { }
 

@@ -24,7 +24,7 @@ import {WeatherForecastWeeklyComponent} from './features/weather-forecast-weekly
 import {WeatherConfComponent} from './features/weather/weather-conf/weather-conf.component';
 import {ClockConfComponent} from './features/clock/clock-conf/clock-conf.component';
 import {FormatService} from './shared/format.service';
-import {DateConfigComponent} from './features/date/date-config/date-config.component';
+import {DateConfComponent} from './features/date/date-conf/date-conf.component';
 import {NewsService} from './shared/news.service';
 import { NewsComponent } from './features/news/news.component';
 import { NewsConfComponent } from './features/news/news-conf/news-conf.component';
@@ -45,7 +45,7 @@ import { NewsConfComponent } from './features/news/news-conf/news-conf.component
     WeatherForecastWeeklyComponent,
     WeatherConfComponent,
     ClockConfComponent,
-    DateConfigComponent,
+    DateConfComponent,
     NewsComponent,
     NewsConfComponent
   ],
