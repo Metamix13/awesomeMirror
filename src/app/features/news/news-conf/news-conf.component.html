@@ -1,6 +1,13 @@
 <div class="container">
   <form #newsForm="ngForm">
     <div class="form-group">
+      <label for="newsSize">Font Size</label>
+      <input type="number" class="form-control" id="newsSize" step="0.25"
+             required
+             [(ngModel)]="formatService.newsFontSize" name="newsSize"
+             #name="ngModel">
+    </div>
+    <div class="form-group">
       <label for="country">Country</label>
       <select class="form-control" id="country"
               required

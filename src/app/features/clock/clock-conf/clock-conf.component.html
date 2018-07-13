@@ -2,7 +2,7 @@
   <form #clockForm="ngForm">
     <div class="form-group">
       <label for="clockSize">Font Size</label>
-      <input type="number" class="form-control" id="clockSize"
+      <input type="number" class="form-control" id="clockSize" step="0.25"
              required
              [(ngModel)]="formatService.clockFontSize" name="clockSize"
              #name="ngModel">

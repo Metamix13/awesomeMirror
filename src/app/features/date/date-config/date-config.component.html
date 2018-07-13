@@ -2,7 +2,7 @@
   <form #clockForm="ngForm">
     <div class="form-group">
       <label for="dateSize">Font Size</label>
-      <input type="number" class="form-control" id="dateSize"
+      <input type="number" class="form-control" id="dateSize" step="0.25"
              required
              [(ngModel)]="formatService.dateFontSize" name="dateSize"
              #name="ngModel">

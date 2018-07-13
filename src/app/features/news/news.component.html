@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="media" *ngIf="actNews.title !== 'placeholder Title'">
+  <div class="media" *ngIf="actNews.title !== 'placeholder Title'" [ngStyle]="{'font-size': formatService.newsFontSize + 'rem'}">
     <img class="mr-3" src="{{actNews.urlToImage}}" *ngIf="actNews.urlToImage !== ''">
     <div class="media-body">
       <h5 class="mt-0">{{actNews.source.name}} : {{actNews.title}}<small class="pull-right">{{actNews.publishedAt | date:'longDate'}}</small></h5>

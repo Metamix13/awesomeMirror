@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NewsService} from '../../shared/news.service';
 import {News} from '../../shared/news.model';
+import {FormatService} from "../../shared/format.service";
 
 @Component({
   selector: 'app-news',
@@ -13,7 +14,7 @@ export class NewsComponent implements OnInit {
   interval: number;
   actNews: News;
 
-  constructor(public newsService:NewsService) {
+  constructor(public newsService:NewsService, public formatService:FormatService) {
     this.index = 0;
     this.interval = 30;
     this.actNews = new News();
@@ -33,7 +34,12 @@ export class NewsComponent implements OnInit {
     if(this.index >= 20){
       this.index = 0;
     }else{
-      this.actNews = this.newsService.news[this.index];
+      // Explicit declaration caused by client problems. (On MacOSX with Safari)
+      this.actNews.title = this.newsService.news[this.index].title;
+      this.actNews.description = this.newsService.news[this.index].description;
+      this.actNews.source = this.newsService.news[this.index].source;
+      this.actNews.urlToImage = this.newsService.news[this.index].urlToImage;
+      this.actNews.publishedAt = this.newsService.news[this.index].publishedAt;
       this.index++;
 
     }

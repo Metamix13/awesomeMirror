@@ -9,6 +9,7 @@ export class FormatService{
   posDateFormats: string[];
   clockFontSize: number;
   dateFontSize: number;
+  newsFontSize: number;
 
   constructor(){
     this.showSecSeperate = true;
@@ -20,5 +21,6 @@ export class FormatService{
     this.posDateFormats = ['shortDate','mediumDate','longDate','fullDate'];
     this.clockFontSize = 4.5;
     this.dateFontSize = 2;
+    this.newsFontSize = 1;
   }
 }
