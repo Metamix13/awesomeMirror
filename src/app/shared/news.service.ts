@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {HttpClient} from '@angular/common/http';
+import {News} from './news.model';
 
 @Injectable()
 export class NewsService {
@@ -9,7 +10,7 @@ export class NewsService {
 
   country: string;
   posCountries: string[];
-  news: object;
+  news: News[];
 
   constructor(private http:HttpClient){
     this.country = 'de';
@@ -24,7 +25,7 @@ export class NewsService {
   }
 
   getData(country:string){
-    this.getCurrentNewsFromNewsAPI(country).subscribe(data => this.news = data);
+    this.getCurrentNewsFromNewsAPI(country).subscribe(data => this.news = data.articles);
   }
 
 }

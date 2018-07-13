@@ -1,3 +1,9 @@
-<p>
-  {{actNews}}
-</p>
+<div class="container">
+  <div class="media" *ngIf="actNews.title !== 'placeholder Title'">
+    <img class="mr-3" src="{{actNews.urlToImage}}" *ngIf="actNews.urlToImage !== ''">
+    <div class="media-body">
+      <h5 class="mt-0">{{actNews.source.name}} : {{actNews.title}}<small class="pull-right">{{actNews.publishedAt | date:'longDate'}}</small></h5>
+      {{actNews.description}}
+    </div>
+  </div>
+</div>
