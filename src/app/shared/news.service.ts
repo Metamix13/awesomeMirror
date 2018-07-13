@@ -2,17 +2,19 @@ import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {HttpClient} from '@angular/common/http';
 import {News} from './news.model';
+import {ConfigService} from "./config.service";
 
 @Injectable()
 export class NewsService {
   readonly ROOT_URL = 'https://newsapi.org/v2/top-headlines?';
-  readonly API_KEY = 'd8f91ac4e70f4825b767c6d9a9f52337';
+  API_KEY:string;
 
   country: string;
   posCountries: string[];
   news: News[];
 
-  constructor(private http:HttpClient){
+  constructor(private http:HttpClient, private configService:ConfigService){
+    this.API_KEY = this.configService.newsAPIKey;
     this.country = 'de';
     this.posCountries = ['us', 'de'];
     this.getData(this.country);
@@ -21,6 +23,7 @@ export class NewsService {
   }
 
   getCurrentNewsFromNewsAPI(country:string):Observable<any>{
+    this.API_KEY = this.configService.newsAPIKey;
     return this.http.get(this.ROOT_URL + 'country=' + country + '&apiKey=' + this.API_KEY);
   }
 

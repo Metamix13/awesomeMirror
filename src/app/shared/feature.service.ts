@@ -16,10 +16,10 @@ export class FeatureService {
     this.featureList = [
       new Feature('clock','This is a simple clock', true),
       new Feature('date', 'This is a date plugin', true),
-      new Feature('weather','This is a weather plugin', true),
-      new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', true),
-      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', true),
-      new Feature('news', 'This is a news plugin', true)
+      new Feature('weather','This is a weather plugin', false),
+      new Feature('weather-forecast-hourly','This is a weather forecast (hourly) plugin', false),
+      new Feature('weather-forecast-weekly','This is a weather forecast (weekly) plugin', false),
+      new Feature('news', 'This is a news plugin', false)
     ];
 
     this.setDefaultPositions();

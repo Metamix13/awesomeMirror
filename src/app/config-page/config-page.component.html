@@ -1,3 +1,42 @@
-<p>
-  config-page works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="my-4">Configuration of the Smart Mirror Application
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="my-4">About <small><i class="fa fa-info-circle" aria-hidden="true"></i></small></h3>
+      <p>To configure data about the project.</p>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="my-4">Technical <small><i class="fa fa-cogs" aria-hidden="true"></i></small></h3>
+      <p>To configure the technical data from the project.</p>
+      <div class="form-group">
+        <label for="newsAPIKEY">News API Key</label>
+      <input type="text" class="form-control" id="newsAPIKEY"
+             required
+             [(ngModel)]="configService.newsAPIKey" name="newsAPIKEY"
+             #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="darkSkyAPIKey">Dark Sky API Key</label>
+        <input type="text" class="form-control" id="darkSkyAPIKey"
+               required
+               [(ngModel)]="configService.darkSkyAPIKey" name="darkSkyAPIKey"
+               #name="ngModel">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>

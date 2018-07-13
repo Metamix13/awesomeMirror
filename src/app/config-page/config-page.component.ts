@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ConfigService} from "../shared/config.service";
 
 @Component({
   selector: 'app-config-page',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public configService:ConfigService) { }
 
   ngOnInit() {
   }
+
+
 
 }

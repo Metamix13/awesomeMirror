@@ -27,6 +27,7 @@ import {DateConfComponent} from './features/date/date-conf/date-conf.component';
 import {NewsService} from './shared/news.service';
 import { NewsComponent } from './features/news/news.component';
 import { NewsConfComponent } from './features/news/news-conf/news-conf.component';
+import {ConfigService} from "./shared/config.service";
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { NewsConfComponent } from './features/news/news-conf/news-conf.component
     ViewModeService,
     WeatherService,
     FormatService,
-    NewsService],
+    NewsService,
+    ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
