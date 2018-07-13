@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!viewModeService.viewMode">
   <div class="container">
     <!--Navbar left Content-->
-    <button class="btn btn-light" (click)="viewModeService.changeViewMode(true)"><i class="fa fa-sign-in"
+    <button class="btn btn-light" [disabled]="router.url !== '/dashboard'" (click)="viewModeService.changeViewMode(true)"><i class="fa fa-sign-in"
                                                                                     aria-hidden="true"></i> View Mode
     </button>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <button class="btn btn-light dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+        <button class="btn btn-light dropdown-toggle" [disabled]="router.url !== '/dashboard'" data-toggle="dropdown" role="button" aria-haspopup="true"
                 aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> Add Feature
         </button>
         <div class="dropdown-menu" aria-labelledby="addDropdown">

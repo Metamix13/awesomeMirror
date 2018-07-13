@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FeatureService} from '../shared/feature.service';
 import {ViewModeService} from '../shared/view-mode.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,7 +10,7 @@ import {ViewModeService} from '../shared/view-mode.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public featureService: FeatureService, public viewModeService:ViewModeService) { }
+  constructor(public featureService: FeatureService, public viewModeService:ViewModeService, public router:Router) { }
 
   ngOnInit() {
   }
