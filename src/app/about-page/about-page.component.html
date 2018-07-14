@@ -16,27 +16,15 @@
     <div class="col-lg-12">
       <h3 class="my-4">Projektmitglieder</h3>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
-      <h4>Lukas Müller
-        <small>Entwickler</small>
+
+    <div class="col-lg-4 col-sm-6 text-center mb-4" *ngFor="let member of configService.projectMembers">
+      <img class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png">
+      <h4>{{member.name}}
+        <small>{{member.role}}</small>
       </h4>
-      <p>T-Systems International System Engineer IoT Platform Integration</p>
+      <p>{{member.info}}</p>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
-      <h4>Phillip Wolter
-        <small>Betreuungsdozent</small>
-      </h4>
-      <a>phillip.wolter@teutloff-bs.de</a>
-    </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
-      <h4>Carolin Hannemann
-        <small>Zweitprüferin</small>
-      </h4>
-      <a>carolin.hannemann@teutloff-bs.de</a>
-    </div>
+
   </div>
 </div>
 <footer class="py-5 bg-light">

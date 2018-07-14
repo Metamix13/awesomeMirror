@@ -17,7 +17,7 @@
 *.launch
 .settings/
 *.sublime-workspace
-.API_keys.md
+.notes.md
 
 # IDE - VSCode
 .vscode/*
