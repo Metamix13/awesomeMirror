@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ConfigService} from "../shared/config.service";
-import {Member} from "../shared/member.model";
 import {TranslateService} from "@ngx-translate/core";
 
 @Component({
@@ -10,15 +9,12 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class ConfigPageComponent implements OnInit {
 
-  newsAPIKeyShown:boolean;
-  darkSkyAPIKeyShown:boolean;
-  inputMember:Member;
+  newsAPIKeyShown:boolean; // Show or hide API Key Input value
+  darkSkyAPIKeyShown:boolean; // Show or hide API Key Input value
 
   constructor(public configService:ConfigService, private translateService:TranslateService) {
     this.newsAPIKeyShown = false;
     this.darkSkyAPIKeyShown = false;
-    this.inputMember = new Member('', '', '');
-
   }
 
   ngOnInit() {
