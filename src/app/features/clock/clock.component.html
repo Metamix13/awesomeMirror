@@ -1,3 +1,4 @@
-<h1 [ngStyle]="{'font-size': formatService.clockFontSize + 'rem'}" >
-  {{time | date:formatService.formatTime}}<small *ngIf="formatService.showSecSeperate">{{time | date:formatService.formatSec}}</small>
+<h1 [ngStyle]="{'font-size': formatService.clockFontSize + 'rem'}">
+  {{time | date:formatService.formatTime}}
+  <small *ngIf="formatService.showSecSeperate">{{time | date:formatService.formatSec}}</small>
 </h1>

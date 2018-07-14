@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ConfigService} from "../shared/config.service";
 
 @Component({
@@ -8,7 +8,8 @@ import {ConfigService} from "../shared/config.service";
 })
 export class AboutPageComponent implements OnInit {
 
-  constructor(public configService:ConfigService) { }
+  constructor(public configService: ConfigService) {
+  }
 
   ngOnInit() {
   }

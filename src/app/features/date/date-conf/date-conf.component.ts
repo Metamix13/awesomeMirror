@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormatService} from '../../../shared/format.service';
 
 @Component({
@@ -8,7 +8,8 @@ import {FormatService} from '../../../shared/format.service';
 })
 export class DateConfComponent implements OnInit {
 
-  constructor(public formatService:FormatService) { }
+  constructor(public formatService: FormatService) {
+  }
 
   ngOnInit() {
   }

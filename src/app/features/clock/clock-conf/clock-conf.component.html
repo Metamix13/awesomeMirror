@@ -18,9 +18,9 @@
     </div>
     <div class="dropdown-divider"></div>
     <div class="form-group">
-    <label for="showSecPart" translate>ClockConf.showSecPart
-      <input type="checkbox" [(ngModel)]="formatService.showSecSeperate" id="showSecPart" name="ngModel">
-    </label>
+      <label for="showSecPart" translate>ClockConf.showSecPart
+        <input type="checkbox" [(ngModel)]="formatService.showSecSeperate" id="showSecPart" name="ngModel">
+      </label>
     </div>
     <div class="form-group" [hidden]="!formatService.showSecSeperate">
       <label for="formatSec" translate>ClockConf.secPartFormat</label>

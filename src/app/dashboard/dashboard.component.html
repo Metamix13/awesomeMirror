@@ -6,12 +6,16 @@
        [position]="{x: feature.xPos, y: feature.yPos}"
        (endOffset)="onMoveEnd(feature, $event)"
        [ngClass]="{'border-light': viewModeService.viewMode}">
+    <!-- Card Header and Action Items -->
     <div class="card-header" [hidden]="viewModeService.viewMode">
       {{'FeatureList.' + feature.name | translate}}
+      <!-- Delete Feature Action -->
       <i (click)="featureService.changeShown(feature.name,false)" class="fa fa-times pull-right" aria-hidden="true"></i>
+      <!-- Handler for ngDraggable -->
       <i class="fa fa-arrows-alt pull-right" #handler></i>
+      <!-- Configuration Dropdown with Feature Config Components -->
       <div class="dropdown show">
-        <a  class="pull-right" id="dropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true"
+        <a class="pull-right" id="dropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true"
            aria-expanded="false"><i class="fa fa-cogs pull-right" aria-hidden="true"></i></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
           <div ngSwitch="{{feature.name}}">
@@ -24,7 +28,7 @@
           </div>
         </div>
       </div>
-
+      <!-- Card Body with Feature Components -->
     </div>
     <div class="card-body">
       <div ngSwitch="{{feature.name}}">

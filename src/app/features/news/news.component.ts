@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NewsService} from '../../shared/news.service';
 import {News} from '../../shared/news.model';
 import {FormatService} from "../../shared/format.service";
@@ -10,14 +10,16 @@ import {FormatService} from "../../shared/format.service";
 })
 export class NewsComponent implements OnInit {
 
-  index: number;
-  interval: number;
-  actNews: News;
+  index: number; //Index for iterating News array
+  interval: number; //Hold the interval level
+  actNews: News; //Hold the actNews that will be rendered
 
-  constructor(public newsService:NewsService, public formatService:FormatService) {
+  constructor(public newsService: NewsService, public formatService: FormatService) {
+    //Init attributes with default values
     this.index = 0;
     this.interval = 30;
     this.actNews = new News();
+    //Subscribe to newsService and call startInterval() by getting observable
     this.newsService.getCurrentNewsFromNewsAPI(this.newsService.country).subscribe(obs => this.startInterval());
   }
 
@@ -25,15 +27,21 @@ export class NewsComponent implements OnInit {
 
   }
 
-  startInterval(){
+  /*
+    Start interval for iterating over newsService News array
+   */
+  startInterval() {
     this.increaseInterval();
-    setInterval(() => this.increaseInterval(),1000 * this.interval);
+    setInterval(() => this.increaseInterval(), 1000 * this.interval);
   }
 
-  increaseInterval(){
-    if(this.index >= 20){
+  /*
+    Increase and reset index. Set actNews from newsService News array
+   */
+  increaseInterval() {
+    if (this.index >= 20) {
       this.index = 0;
-    }else{
+    } else {
       // Explicit declaration caused by client problems. (On MacOSX with Safari)
       this.actNews.title = this.newsService.news[this.index].title;
       this.actNews.description = this.newsService.news[this.index].description;
