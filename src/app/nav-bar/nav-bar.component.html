@@ -33,13 +33,13 @@
                                                                                                  aria-hidden="true"></i>
             Configuration</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore"
+          <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}" (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore"
                                                                                      aria-hidden="true"></i> Set default
             positions</a>
-          <a class="dropdown-item" (click)="featureService.savePosition()"><i class="fa fa-floppy-o"
+          <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}" (click)="featureService.savePosition()"><i class="fa fa-floppy-o"
                                                                               aria-hidden="true"></i> Save custom
             positions</a>
-          <a class="dropdown-item" [ngClass]="{'disabled':featureService.savedPositions.length === 0}"
+          <a class="dropdown-item" [ngClass]="{'disabled':featureService.savedPositions.length === 0 || router.url !== '/dashboard'}"
              (click)="featureService.arrangeWithSavedPositions()"><i class="fa fa-bookmark-o" aria-hidden="true"></i>
             Apply custom positions</a>
         </div>
