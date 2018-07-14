@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container major">
   <form #newsForm="ngForm">
     <div class="form-group">
       <label for="newsSize" translate>NewsConf.fontSize</label>
@@ -15,6 +15,17 @@
               #country="ngModel">
         <option *ngFor="let country of newsService.posCountries" [value]="country">{{country}}</option>
       </select>
+    </div>
+    <div class="form-group">
+      <label for="newsInterval" translate>NewsConf.newsInterval</label>
+      <input type="number" class="form-control major" id="newsInterval" step="1"
+             required
+             [(ngModel)]="formatService.newsInterval" name="newsInterval"
+             #name="ngModel">
+      <div [hidden]="name.pristine"
+           class="alert alert-danger">
+        <p translate>NewsConf.intervalChanged</p>
+      </div>
     </div>
     <button type="submit" class="btn btn-success"
             (click)="newsService.getData(newsService.country)"

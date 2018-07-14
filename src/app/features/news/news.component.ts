@@ -11,13 +11,11 @@ import {FormatService} from "../../shared/format.service";
 export class NewsComponent implements OnInit {
 
   index: number; //Index for iterating News array
-  interval: number; //Hold the interval level
   actNews: News; //Hold the actNews that will be rendered
 
   constructor(public newsService: NewsService, public formatService: FormatService) {
     //Init attributes with default values
     this.index = 0;
-    this.interval = 30;
     this.actNews = new News();
     //Subscribe to newsService and call startInterval() by getting observable
     this.newsService.getCurrentNewsFromNewsAPI(this.newsService.country).subscribe(obs => this.startInterval());
@@ -32,7 +30,7 @@ export class NewsComponent implements OnInit {
    */
   startInterval() {
     this.increaseInterval();
-    setInterval(() => this.increaseInterval(), 1000 * this.interval);
+    setInterval(() => this.increaseInterval(), 1000 * this.formatService.newsInterval);
   }
 
   /*

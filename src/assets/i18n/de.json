@@ -56,7 +56,9 @@
   "NewsConf": {
     "fontSize": "Schriftgröße",
     "country": "Land",
-    "apply": "Anwenden"
+    "apply": "Anwenden",
+    "newsInterval": "Intervall",
+    "intervalChanged": "Um Änderungen am Intervall zu übernehmen muss das Feature neu hinzugefügt werden"
   },
   "WeatherConf": {
     "latitude": "Breitengrad",

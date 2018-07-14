@@ -10,6 +10,7 @@ export class FormatService{
   clockFontSize: number;
   dateFontSize: number;
   newsFontSize: number;
+  newsInterval: number;
 
   constructor(){
     this.showSecSeperate = true;
@@ -22,5 +23,6 @@ export class FormatService{
     this.clockFontSize = 4.5;
     this.dateFontSize = 2;
     this.newsFontSize = 1;
+    this.newsInterval = 30;
   }
 }

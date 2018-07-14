@@ -56,7 +56,9 @@
   "NewsConf": {
     "fontSize": "Font Size",
     "country": "Country",
-    "apply": "Apply"
+    "apply": "Apply",
+    "newsInterval": "Interval",
+    "intervalChanged": "To apply the new interval please reload the widget"
   },
   "WeatherConf": {
     "latitude": "Latitude",
