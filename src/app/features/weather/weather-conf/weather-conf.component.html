@@ -1,7 +1,7 @@
 <div class="container">
   <form  #coordinateForm="ngForm">
     <div class="form-group">
-      <label for="latitude"translate>WeatherConf.latitude</label>
+      <label for="latitude" translate>WeatherConf.latitude</label>
       <input type="text" class="form-control" id="latitude"
              required
              [(ngModel)]="weatherService.lat" name="latitude"
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="longitude"translate>WeatherConf.longitude</label>
+      <label for="longitude" translate>WeatherConf.longitude</label>
       <input type="text" class="form-control" id="longitude"
              required
              [(ngModel)]="weatherService.lng" name="longitude"
