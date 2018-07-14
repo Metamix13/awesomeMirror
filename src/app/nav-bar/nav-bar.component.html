@@ -1,18 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!viewModeService.viewMode">
   <div class="container">
     <!--Navbar left Content-->
-    <button class="btn btn-light" [disabled]="router.url !== '/dashboard'" (click)="viewModeService.changeViewMode(true)"><i class="fa fa-sign-in"
-                                                                                    aria-hidden="true"></i> View Mode
+    <button class="btn btn-light" [disabled]="router.url !== '/dashboard'"
+            (click)="viewModeService.changeViewMode(true)"><i class="fa fa-sign-in"
+                                                              aria-hidden="true"></i> View Mode
     </button>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <button class="btn btn-light dropdown-toggle" [disabled]="router.url !== '/dashboard'" data-toggle="dropdown" role="button" aria-haspopup="true"
+        <button class="btn btn-light dropdown-toggle" [disabled]="router.url !== '/dashboard'" data-toggle="dropdown"
+                role="button" aria-haspopup="true"
                 aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> Add Feature
         </button>
         <div class="dropdown-menu" aria-labelledby="addDropdown">
           <div *ngFor="let feature of featureService.featureList">
-            <div class="dropdown-item" *ngIf="!feature.shown" (click)="feature.shown = !feature.shown">
+            <div class="dropdown-item"
+                 *ngIf="!feature.shown"
+                 [ngClass]="{'disabled':
+                 (configService.darkSkyAPIKey.length === 0 && (feature.name === 'weather' || feature.name === 'weather-forecast-hourly' || feature.name === 'weather-forecast-weekly'))
+                  || (configService.newsAPIKey.length === 0 && feature.name === 'news')}"
+                 (click)="feature.shown = !feature.shown">
               {{feature.name}}
+              <span class="APIWarning" *ngIf="(configService.darkSkyAPIKey.length === 0 && (feature.name === 'weather' || feature.name === 'weather-forecast-hourly' || feature.name === 'weather-forecast-weekly'))
+                  || (configService.newsAPIKey.length === 0 && feature.name === 'news')"> - Please add relevant API Key!</span>
             </div>
           </div>
         </div>
@@ -33,13 +42,16 @@
                                                                                                  aria-hidden="true"></i>
             Configuration</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}" (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore"
-                                                                                     aria-hidden="true"></i> Set default
+          <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}"
+             (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore"
+                                                               aria-hidden="true"></i> Set default
             positions</a>
-          <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}" (click)="featureService.savePosition()"><i class="fa fa-floppy-o"
-                                                                              aria-hidden="true"></i> Save custom
+          <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}"
+             (click)="featureService.savePosition()"><i class="fa fa-floppy-o"
+                                                        aria-hidden="true"></i> Save custom
             positions</a>
-          <a class="dropdown-item" [ngClass]="{'disabled':featureService.savedPositions.length === 0 || router.url !== '/dashboard'}"
+          <a class="dropdown-item"
+             [ngClass]="{'disabled':featureService.savedPositions.length === 0 || router.url !== '/dashboard'}"
              (click)="featureService.arrangeWithSavedPositions()"><i class="fa fa-bookmark-o" aria-hidden="true"></i>
             Apply custom positions</a>
         </div>

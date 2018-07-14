@@ -16,3 +16,7 @@
   pointer-events: none;
   color: gray !important;
 }
+
+.APIWarning {
+  color: red;
+}
