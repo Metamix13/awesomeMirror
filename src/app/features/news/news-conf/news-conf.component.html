@@ -1,14 +1,14 @@
 <div class="container">
   <form #newsForm="ngForm">
     <div class="form-group">
-      <label for="newsSize">Font Size</label>
+      <label for="newsSize"translate>NewsConf.fontSize</label>
       <input type="number" class="form-control" id="newsSize" step="0.25"
              required
              [(ngModel)]="formatService.newsFontSize" name="newsSize"
              #name="ngModel">
     </div>
     <div class="form-group">
-      <label for="country">Country</label>
+      <label for="country"translate>NewsConf.country</label>
       <select class="form-control" id="country"
               required
               [(ngModel)]="newsService.country" name="country"
@@ -18,7 +18,7 @@
     </div>
     <button type="submit" class="btn btn-success"
             (click)="newsService.getData(newsService.country)"
-            >Apply
+            translate>NewsConf.apply
     </button>
   </form>
 </div>

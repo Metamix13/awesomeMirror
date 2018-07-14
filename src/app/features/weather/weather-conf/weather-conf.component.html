@@ -1,32 +1,32 @@
 <div class="container">
   <form  #coordinateForm="ngForm">
     <div class="form-group">
-      <label for="latitude">Latitude</label>
+      <label for="latitude"translate>WeatherConf.latitude</label>
       <input type="text" class="form-control" id="latitude"
              required
              [(ngModel)]="weatherService.lat" name="latitude"
              #name="ngModel">
       <div [hidden]="name.valid || name.pristine"
-           class="alert alert-danger">
-        Latitude is required!
+           class="alert alert-danger" translate>
+        WeatherConf.latitudeRequired
       </div>
     </div>
     <div class="form-group">
-      <label for="longitude">Longitude</label>
+      <label for="longitude"translate>WeatherConf.longitude</label>
       <input type="text" class="form-control" id="longitude"
              required
              [(ngModel)]="weatherService.lng" name="longitude"
              #name="ngModel">
       <div [hidden]="name.valid || name.pristine"
-           class="alert alert-danger">
-        Longitude is required!
+           class="alert alert-danger" translate>
+        WeatherConf.longitudeRequired
       </div>
     </div>
-    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">View Google Maps for Coordinates</a>
+    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" translate>WeatherConf.visitGoogle</a>
 
     <button type="submit" class="btn btn-success"
             (click)="weatherService.getData(weatherService.lat, weatherService.lng)"
-            [disabled]="!coordinateForm.form.valid">Apply
+            [disabled]="!coordinateForm.form.valid" translate>WeatherConf.apply
     </button>
   </form>
 </div>

@@ -9,7 +9,7 @@
       <li class="nav-item dropdown">
         <button class="btn btn-light dropdown-toggle" [disabled]="router.url !== '/dashboard'" data-toggle="dropdown"
                 role="button" aria-haspopup="true"
-                aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> Add Feature
+                aria-expanded="false" translate><i class="fa fa-plus" aria-hidden="true" ></i> NavBar.addFeature
         </button>
         <div class="dropdown-menu" aria-labelledby="addDropdown">
           <div *ngFor="let feature of featureService.featureList">
@@ -19,9 +19,9 @@
                  (configService.darkSkyAPIKey.length === 0 && (feature.name === 'weather' || feature.name === 'weather-forecast-hourly' || feature.name === 'weather-forecast-weekly'))
                   || (configService.newsAPIKey.length === 0 && feature.name === 'news')}"
                  (click)="feature.shown = !feature.shown">
-              {{feature.name}}
+              {{'FeatureList.' + feature.name | translate }}
               <span class="APIWarning" *ngIf="(configService.darkSkyAPIKey.length === 0 && (feature.name === 'weather' || feature.name === 'weather-forecast-hourly' || feature.name === 'weather-forecast-weekly'))
-                  || (configService.newsAPIKey.length === 0 && feature.name === 'news')"> - Please add relevant API Key!</span>
+                  || (configService.newsAPIKey.length === 0 && feature.name === 'news')" translate> NavBar.APIWarning</span>
             </div>
           </div>
         </div>
@@ -43,17 +43,15 @@
             Configuration</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}"
-             (click)="featureService.setDefaultPositions()"><i class="fa fa-window-restore"
-                                                               aria-hidden="true"></i> Set default
-            positions</a>
+             (click)="featureService.setDefaultPositions()" translate><i class="fa fa-window-restore"
+                                                               aria-hidden="true"></i> NavBar.setDefaultPositions</a>
           <a class="dropdown-item" [ngClass]="{'disabled':router.url !== '/dashboard'}"
-             (click)="featureService.savePosition()"><i class="fa fa-floppy-o"
-                                                        aria-hidden="true"></i> Save custom
-            positions</a>
+             (click)="featureService.savePosition()" translate><i class="fa fa-floppy-o"
+                                                        aria-hidden="true"></i> NavBar.saveCustomPositions</a>
           <a class="dropdown-item"
              [ngClass]="{'disabled':featureService.savedPositions.length === 0 || router.url !== '/dashboard'}"
-             (click)="featureService.arrangeWithSavedPositions()"><i class="fa fa-bookmark-o" aria-hidden="true"></i>
-            Apply custom positions</a>
+             (click)="featureService.arrangeWithSavedPositions()" translate><i class="fa fa-bookmark-o" aria-hidden="true"></i>
+            NavBar.applyCustomPositions</a>
         </div>
       </li>
     </ul>

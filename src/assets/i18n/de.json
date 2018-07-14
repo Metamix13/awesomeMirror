@@ -1,20 +1,75 @@
 {
-  "NavBar":{
+  "NavBar": {
     "viewMode": "Ansichts Modus",
     "addFeature": "Funktion hinzufügen",
     "dashboard": "Dashboard",
     "about": "Über",
-    "control": "Einstellungen"
+    "control": "Einstellungen",
+    "APIWarning": "- Bitte API Schlüssel einfügen!",
+    "setDefaultPositions": "Standard Anordnung anwenden",
+    "saveCustomPositions": "Eigene Anordnung speichern",
+    "applyCustomPositions": "Eigene Anordnung anwenden"
   },
-  "FeatureList":{
+  "FeatureList": {
     "weather": "Wetter",
-    "weather-forecast-hourly": "Wetter Vorhersage stündlich",
-    "weather-forecast-weekly": "Wetter Vorhersage wöchentlich",
+    "weather-forecast-hourly": "Wettervorhersage stündlich",
+    "weather-forecast-weekly": "Wettervorhersage wöchentlich",
     "clock": "Uhr",
-    "news": "News"
+    "news": "Nachrichten",
+    "date": "Datum"
   },
-  "ConfigPage":{
-    "selectLanguage": "Sprachauswahl"
+  "AboutPage": {
+    "headline": "Technikerarbeit SmartMirror",
+    "subline": "von Lukas Müller für TEUTLOFF® Technische Akademie gGmbH",
+    "projectDescription": "Im Fokus dieser Projektarbeit soll die Entwicklung einer Frontend-Applikation für einen Smart Mirror stehen. Diese soll im Kern mit der Auszeichnungssprache HTML, im Design mit der Stylesheet Sprache CSS und in der Funktionalität in der Skriptsprache JavaScript/Typescript entwickelt werden. Diese Applikation soll im Rahmen der Projektarbeit prototyphaft auf einem Raspberry-PI 3 implementiert werden. (Details siehe Projektdokumentation)",
+    "projectMember": "Projektmitglieder",
+    "placeholderName": "Name",
+    "placeholderRole": "Rolle",
+    "placeholderInfo": "Informationen",
+    "addNewMember": "Neue Projektmitglieder hinzufügen"
+  },
+  "ConfigPage": {
+    "selectLanguage": "Sprachauswahl",
+    "headline": "Konfiguration zur Smart Mirror Applikation",
+    "about": "Informationen",
+    "aboutDescription": "Konfiguration der Informationen über das Projekt",
+    "projectMembers": "Projektmitglieder",
+    "name": "Name",
+    "role": "Rolle",
+    "info": "Information",
+    "add": "Mitglied hinzufügen",
+    "technicalHeadline": "Technischer Inhalt",
+    "technicalDescription": "Konfiguration der technischen Daten des Projektes",
+    "newsAPIKey": "News API Schlüssel",
+    "darkSkyAPIKey": "Dark Sky API Schlüssel"
+  },
+  "ClockConf": {
+    "fontSize": "Schriftgröße",
+    "timeFormat": "Zeitformat",
+    "showSecPart": "Zeige zweite Einheit:",
+    "secPartFormat": "Sek Format"
+  },
+  "DateConf": {
+    "fontSize": "Schriftgröße",
+    "dateFormat": "Datums Format"
+  },
+  "NewsConf": {
+    "fontSize": "Schriftgröße",
+    "country": "Land",
+    "apply": "Anwenden"
+  },
+  "WeatherConf": {
+    "latitude": "Breitengrad",
+    "latitudeRequired": "Breitengrad wird benötigt!",
+    "longitude": "Längengrad",
+    "longitudeRequired": "Längengrad wird benötigt!",
+    "visitGoogle": "Besuche Google Maps für Koordinaten",
+    "apply": "Anwenden"
+  },
+  "Weather": {
+    "chanceOfRain": "Regenwahrscheinlichkeit",
+    "humidity": "Luftfeuchtigkeit",
+    "uvIndex": "UV Index",
+    "windSpeed": "Km/h Windgeschwindigkeit"
   }
-
 }

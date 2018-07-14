@@ -1,21 +1,75 @@
 {
-  "NavBar":{
+  "NavBar": {
     "viewMode": "View Mode",
     "addFeature": "Add Feature",
     "dashboard": "Dashboard",
     "about": "About",
-    "control": "Control"
+    "control": "Control",
+    "APIWarning": "- Please add relevant API Key!",
+    "setDefaultPositions": "Set default positions",
+    "saveCustomPositions": "Save custom positions",
+    "applyCustomPositions": "Apply custom positions"
   },
   "FeatureList": {
     "weather": "Weather",
     "weather-forecast-hourly": "Weather forecast hourly",
     "weather-forecast-weekly": "Weather forecast weekly",
     "clock": "Clock",
-    "news": "News"
+    "news": "News",
+    "date": "Date"
   },
-  "ConfigPage":{
-    "selectLanguage": "Select language"
+  "AboutPage": {
+    "headline": "Technical Project SmartMirror",
+    "subline": "from Lukas Mueller for TEUTLOFF® Technische Akademie gGmbH",
+    "projectDescription": "Content of this project is the development of an frontend-application for a smart mirror system. The core of this application is the markup language HTML with the stylesheet language CSS. The functional part is developed with Javascript/Typescript and the framework Angular 5. This application will be implemented on a Raspberry-PI 3. (For more details please have a look at the project documentation.)",
+    "projectMember": "Projectmember",
+    "placeholderName": "Name",
+    "placeholderRole": "Role",
+    "placeholderInfo": "Info",
+    "addNewMember": "Add new Projectmembers"
+  },
+  "ConfigPage": {
+    "selectLanguage": "Select language",
+    "headline": "Configuration of the Smart Mirror Application",
+    "about": "Information",
+    "aboutDescription": "Configure information about the project.",
+    "projectMembers": "Members of the Project",
+    "name": "Name",
+    "role": "Role",
+    "info": "Info",
+    "add": "Add Member",
+    "technicalHeadline": "Technical Content",
+    "technicalDescription": "Configure the technical data from the project.",
+    "newsAPIKey": "News API Key",
+    "darkSkyAPIKey": "Dark Sky API Key"
+  },
+  "ClockConf": {
+    "fontSize": "Font Size",
+    "timeFormat": "Time Format",
+    "showSecPart": "Show secondary Part:",
+    "secPartFormat": "Sec Format"
+  },
+  "DateConf": {
+    "fontSize": "Font Size",
+    "dateFormat": "Date Format"
+  },
+  "NewsConf": {
+    "fontSize": "Font Size",
+    "country": "Country",
+    "apply": "Apply"
+  },
+  "WeatherConf": {
+    "latitude": "Latitude",
+    "latitudeRequired": "Latitude is required!",
+    "longitude": "Longitude",
+    "longitudeRequired": "Longitude is required!",
+    "visitGoogle": "View Google Maps for Coordinates",
+    "apply": "Apply"
+  },
+  "Weather": {
+    "chanceOfRain": "Chance of rain",
+    "humidity": "Humidity",
+    "uvIndex": "UV Index",
+    "windSpeed": "Km/h Wind Speed"
   }
-
-
 }
