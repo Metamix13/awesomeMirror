@@ -1,0 +1,20 @@
+{
+  "NavBar":{
+    "viewMode": "Ansichts Modus",
+    "addFeature": "Funktion hinzufügen",
+    "dashboard": "Dashboard",
+    "about": "Über",
+    "control": "Einstellungen"
+  },
+  "FeatureList":{
+    "weather": "Wetter",
+    "weather-forecast-hourly": "Wetter Vorhersage stündlich",
+    "weather-forecast-weekly": "Wetter Vorhersage wöchentlich",
+    "clock": "Uhr",
+    "news": "News"
+  },
+  "ConfigPage":{
+    "selectLanguage": "Sprachauswahl"
+  }
+
+}

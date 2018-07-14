@@ -16,7 +16,7 @@ import {WeatherComponent} from './features/weather/weather.component';
 import {ViewModeService} from './shared/view-mode.service';
 import {DateComponent} from './features/date/date.component';
 import {WeatherService} from './shared/weather.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {JsonpModule} from '@angular/http';
 import {WeatherForecastHourlyComponent} from './features/weather-forecast-hourly/weather-forecast-hourly.component';
 import {WeatherForecastWeeklyComponent} from './features/weather-forecast-weekly/weather-forecast-weekly.component';
@@ -28,6 +28,8 @@ import {NewsService} from './shared/news.service';
 import { NewsComponent } from './features/news/news.component';
 import { NewsConfComponent } from './features/news/news-conf/news-conf.component';
 import {ConfigService} from "./shared/config.service";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
 
 @NgModule({
@@ -55,7 +57,14 @@ import {ConfigService} from "./shared/config.service";
     AppRoutingModule,
     AngularDraggableModule,
     HttpClientModule,
-    JsonpModule
+    JsonpModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     FeatureService,
@@ -67,4 +76,8 @@ import {ConfigService} from "./shared/config.service";
   bootstrap: [AppComponent]
 })
 export class AppModule {
+}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
 }

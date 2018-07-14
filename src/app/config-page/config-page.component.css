@@ -5,3 +5,17 @@ input{
 i{
   cursor: pointer;
 }
+
+.flag{
+  display: inline;
+  max-width: 10%;
+  max-height: 10%;
+  height: auto;
+  border-radius: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.col-sm-10{
+  display:inline;
+}

@@ -21,6 +21,8 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@ngx-translate/core": "^9.1.1",
+    "@ngx-translate/http-loader": "^2.0.1",
     "@types/lodash": "^4.14.110",
     "angular2-draggable": "^1.4.2",
     "bootstrap": "^4.1.1",

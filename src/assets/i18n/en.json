@@ -1,0 +1,21 @@
+{
+  "NavBar":{
+    "viewMode": "View Mode",
+    "addFeature": "Add Feature",
+    "dashboard": "Dashboard",
+    "about": "About",
+    "control": "Control"
+  },
+  "FeatureList": {
+    "weather": "Weather",
+    "weather-forecast-hourly": "Weather forecast hourly",
+    "weather-forecast-weekly": "Weather forecast weekly",
+    "clock": "Clock",
+    "news": "News"
+  },
+  "ConfigPage":{
+    "selectLanguage": "Select language"
+  }
+
+
+}

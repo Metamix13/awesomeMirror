@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ConfigService} from "../shared/config.service";
 import {Member} from "../shared/member.model";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-config-page',
@@ -13,7 +14,7 @@ export class ConfigPageComponent implements OnInit {
   darkSkyAPIKeyShown:boolean;
   inputMember:Member;
 
-  constructor(public configService:ConfigService) {
+  constructor(public configService:ConfigService, private translateService:TranslateService) {
     this.newsAPIKeyShown = false;
     this.darkSkyAPIKeyShown = false;
     this.inputMember = new Member('', '', '');
@@ -21,6 +22,10 @@ export class ConfigPageComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  useLanguage(language:string){
+    this.translateService.use(language);
   }
 
 
