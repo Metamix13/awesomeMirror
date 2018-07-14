@@ -3,18 +3,18 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="my-4">Techniker Projekt SmartMirror
+      <h1 class="my-4">Technical Project SmartMirror
       </h1>
       <h2>
-        <small>von Lukas Müller für TEUTLOFF® Technische Akademie gGmbH</small>
+        <small>from Lukas Mueller for TEUTLOFF® Technische Akademie gGmbH</small>
       </h2>
-      <p>Im Fokus dieser Projektarbeit soll die Entwicklung einer Frontend-Applikation für einen Smart Mirror stehen. Diese soll im Kern mit der Auszeichnungssprache HTML, im Design mit der Stylesheet Sprache CSS und in der Funktionalität in der Skriptsprache JavaScript entwickelt werden. Diese Applikation soll im Rahmen der Projektarbeit prototyphaft auf einem Raspberry-PI 3 implementiert werden. (Details siehe Projektbeschreibung)</p>
+      <p>Content of this project is the development of an frontend-application for a smart mirror system. The core of this application is the markup language HTML with the stylesheet language CSS. The functional part is developed with Javascript/Typescript and the framework Angular 5. This application will be implemented on a Raspberry-PI 3. (For more details please have a look at the project documentation.)</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-lg-12">
-      <h3 class="my-4">Projektmitglieder</h3>
+      <h3 class="my-4">Projectmember</h3>
     </div>
 
     <div class="col-lg-4 col-sm-6 text-center mb-4" *ngFor="let member of configService.projectMembers">
@@ -25,8 +25,19 @@
       <p>{{member.info}}</p>
     </div>
 
+    <div class="col-lg-4 col-sm-6 text-center mb-4" *ngIf="configService.projectMembers.length === 0">
+      <img class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png">
+      <h4>Name
+        <small>Role</small>
+      </h4>
+      <a class="nav-link" [routerLink]="['/config']">Add new Projectmembers.</a>
+    </div>
+
+
   </div>
 </div>
+
+
 <footer class="py-5 bg-light">
   <div class="container">
     <p class="m-0 text-center">Weather Feature powered by <a href="https://darksky.net/dev" target="_blank" rel="noopener noreferrer">Dark Sky</a></p>
