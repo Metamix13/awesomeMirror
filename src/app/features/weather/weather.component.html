@@ -65,21 +65,21 @@
 <!-- Chance of Rain -->
 <div class="row mx-auto">
   <i class="fa fa-tint" aria-hidden="true"></i>
-  <h5 translate> {{weatherService.weatherData?.currently.precipProbability | percent}} Weather.chanceOfRain</h5>
+  <h5> {{weatherService.weatherData?.currently.precipProbability | percent}} <small translate>Weather.chanceOfRain</small></h5>
 </div>
 <!-- Humidity -->
 <div class="row mx-auto">
   <i class="fa fa-tint" aria-hidden="true"></i>
   <i class="fa fa-cloud" aria-hidden="true"></i>
-  <h5 translate> {{weatherService.weatherData?.currently.humidity | percent}} Weather.humidity</h5>
+  <h5> {{weatherService.weatherData?.currently.humidity | percent}} <small translate>Weather.humidity</small></h5>
 </div>
 <!-- UV Index -->
 <div class="row mx-auto">
   <i class="fa fa-sun-o" aria-hidden="true"></i>
-  <h5 translate> {{weatherService.weatherData?.currently.uvIndex}} Weather.uvIndex</h5>
+  <h5> {{weatherService.weatherData?.currently.uvIndex}} <small translate>Weather.uvIndex</small></h5>
 </div>
 <!-- Wind Speed -->
 <div class="row mx-auto">
   <i class="fa fa-ioxhost" aria-hidden="true"></i>
-  <h5 translate> {{weatherService.weatherData?.currently.windSpeed}} Weather.windSpeed</h5>
+  <h5> {{weatherService.weatherData?.currently.windSpeed}} <small translate>Weather.windSpeed</small></h5>
 </div>
