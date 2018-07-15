@@ -1,3 +1,12 @@
+/*
+  News class for the news API call.
+    title: News Title
+    source: News Source
+    publishedAt: News Date
+    description: News text
+    urlToImage: Direct link to the image from the article
+ */
+
 export class News {
   public title: string;
   public source: object;
@@ -5,7 +14,8 @@ export class News {
   public description: string;
   public urlToImage: string;
 
-  constructor(){
+  constructor() {
+    //Init attributes with default values
     this.title = 'placeholder Title';
     this.source = {'id': 'placeholder ID', 'name': 'placeholder Source Name'};
     this.publishedAt = '';

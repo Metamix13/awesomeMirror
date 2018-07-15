@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,8 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent {
   title = 'awesome Mirror';
 
-  constructor(private translateService:TranslateService){
+  constructor(private translateService: TranslateService) {
+    //Set default language of this application
     this.translateService.setDefaultLang('en');
 
   }

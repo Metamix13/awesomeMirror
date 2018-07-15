@@ -11,8 +11,9 @@ import {ConfigService} from "../shared/config.service";
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public featureService: FeatureService, public viewModeService:ViewModeService, public router:Router,
-              public configService:ConfigService) { }
+  constructor(public featureService: FeatureService, public viewModeService: ViewModeService, public router: Router,
+              public configService: ConfigService) {
+  }
 
   ngOnInit() {
   }

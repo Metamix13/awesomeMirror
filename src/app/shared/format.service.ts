@@ -1,18 +1,19 @@
 export class FormatService{
 
-  formatTime: string;
-  posTimeFormats: string[];
-  formatSec: string;
-  posSecTimeFormats: string[];
-  showSecSeperate:boolean;
-  formatDate: string;
-  posDateFormats: string[];
-  clockFontSize: number;
-  dateFontSize: number;
-  newsFontSize: number;
-  newsInterval: number;
+  formatTime: string; //Format for Time
+  posTimeFormats: string[]; //Possible Time Formats
+  formatSec: string; //Format for Sec Part
+  posSecTimeFormats: string[]; //Possible Sec Time Formats
+  showSecSeperate:boolean; //Boolean to hide/show Sec Part
+  formatDate: string; //Format for Date
+  posDateFormats: string[]; //Possible Date Formats
+  clockFontSize: number; //Clock Font Size
+  dateFontSize: number; //Date Font Size
+  newsFontSize: number; //News Font Size
+  newsInterval: number; //News interval for iterating News array
 
   constructor(){
+    //Init attributes with default values
     this.showSecSeperate = true;
     this.formatTime = 'HH:mm';
     this.formatSec = ':ss';

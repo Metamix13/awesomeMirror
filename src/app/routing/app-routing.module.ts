@@ -5,6 +5,7 @@ import {ConfigPageComponent} from '../config-page/config-page.component';
 import {AboutPageComponent} from '../about-page/about-page.component';
 import {DashboardComponent} from '../dashboard/dashboard.component';
 
+// Routes for the whole App
 const routes: Routes = [
   {
     path: 'config',

@@ -1,15 +1,15 @@
-p{
-  display:inline
+p {
+  display: inline
 }
 
-p.warm{
+p.warm {
   color: #dd7200;
 }
 
-p.hot{
+p.hot {
   color: #c40122;
 }
 
-p.cold{
+p.cold {
   color: #009ece;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NewsService} from '../../../shared/news.service';
 import {FormatService} from "../../../shared/format.service";
 
@@ -9,7 +9,8 @@ import {FormatService} from "../../../shared/format.service";
 })
 export class NewsConfComponent implements OnInit {
 
-  constructor(public newsService:NewsService, public formatService:FormatService) { }
+  constructor(public newsService: NewsService, public formatService: FormatService) {
+  }
 
   ngOnInit() {
   }

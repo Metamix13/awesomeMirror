@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {WeatherService} from "../../../shared/weather.service";
 
 @Component({
@@ -8,7 +8,8 @@ import {WeatherService} from "../../../shared/weather.service";
 })
 export class WeatherConfComponent implements OnInit {
 
-  constructor(public weatherService: WeatherService) { }
+  constructor(public weatherService: WeatherService) {
+  }
 
 
   ngOnInit() {

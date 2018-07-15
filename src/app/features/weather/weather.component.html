@@ -1,3 +1,4 @@
+<!-- CSS Pictures with conditions -->
 <div class="card-img-top">
   <div class="icon sunny"
        *ngIf="weatherService.weatherData?.currently.icon === 'clear-day' ||
@@ -6,7 +7,6 @@
       <div class="rays"></div>
     </div>
   </div>
-
   <div class="icon cloudy"
        *ngIf="weatherService.weatherData?.currently.icon === 'partly-cloudy-day' ||
       weatherService.weatherData?.currently.icon === 'partly-cloudy-night' ||
@@ -16,8 +16,6 @@
     <div class="cloud"></div>
     <div class="cloud"></div>
   </div>
-
-
   <div class="icon thunder-storm"
        *ngIf="weatherService.weatherData?.currently.icon === 'thunderstorm' ">
     <div class="cloud"></div>
@@ -26,23 +24,22 @@
       <div class="bolt"></div>
     </div>
   </div>
-
   <div class="icon flurries"
        *ngIf="weatherService.weatherData?.currently.icon === 'hail' ||
-      weatherService.weatherData?.currently.icon === 'snow' " >
+      weatherService.weatherData?.currently.icon === 'snow' ">
     <div class="cloud"></div>
     <div class="snow">
       <div class="flake"></div>
       <div class="flake"></div>
     </div>
   </div>
-
   <div class="icon rainy" *ngIf="weatherService.weatherData?.currently.icon === 'rain' ">
     <div class="cloud"></div>
     <div class="rain"></div>
   </div>
 </div>
-
+<!-- Data -->
+<!-- Currently Temperature -->
 <div class="row mx-auto">
   <h1 [ngClass]="{
   hot: weatherService.weatherData?.currently.temperature >= 25,
@@ -51,31 +48,37 @@
     {{weatherService.weatherData?.currently.temperature | number:'1.1-1'}}°
   </h1>
 </div>
+
+<!-- Summary -->
 <div class="row mx-auto">
   <h5>{{weatherService.weatherData?.currently.summary}}</h5>
 </div>
+<!-- Apparent Temperature -->
 <div class="row mx-auto">
   <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
   <h5 [ngClass]="{
   hot: weatherService.weatherData?.currently.apparentTemperature >= 25,
   cold: weatherService.weatherData?.currently.apparentTemperature <= 17,
   warm: weatherService.weatherData?.currently.apparentTemperature > 17 && weatherService.weatherData?.currently.apparentTemperature < 25 }">
-     {{weatherService.weatherData?.currently.apparentTemperature | number:'1.1-1'}}°</h5>
+    {{weatherService.weatherData?.currently.apparentTemperature | number:'1.1-1'}}°</h5>
 </div>
-
+<!-- Chance of Rain -->
 <div class="row mx-auto">
   <i class="fa fa-tint" aria-hidden="true"></i>
   <h5 translate> {{weatherService.weatherData?.currently.precipProbability | percent}} Weather.chanceOfRain</h5>
 </div>
+<!-- Humidity -->
 <div class="row mx-auto">
   <i class="fa fa-tint" aria-hidden="true"></i>
   <i class="fa fa-cloud" aria-hidden="true"></i>
   <h5 translate> {{weatherService.weatherData?.currently.humidity | percent}} Weather.humidity</h5>
 </div>
+<!-- UV Index -->
 <div class="row mx-auto">
   <i class="fa fa-sun-o" aria-hidden="true"></i>
   <h5 translate> {{weatherService.weatherData?.currently.uvIndex}} Weather.uvIndex</h5>
 </div>
+<!-- Wind Speed -->
 <div class="row mx-auto">
   <i class="fa fa-ioxhost" aria-hidden="true"></i>
   <h5 translate> {{weatherService.weatherData?.currently.windSpeed}} Weather.windSpeed</h5>

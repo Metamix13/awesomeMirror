@@ -3,16 +3,15 @@
   opacity: 0.3;
 }
 
-.dropdown-item{
+.dropdown-item {
   cursor: pointer;
 }
 
-.dropdown-item-text{
+.dropdown-item-text {
   cursor: default;
 }
 
-
-.disabled{
+.disabled {
   pointer-events: none;
   color: gray !important;
 }
