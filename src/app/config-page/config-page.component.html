@@ -12,11 +12,11 @@
     </div>
   </div>
   <div class="col-sm-10">
-    <img class="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/de.svg" alt="Germany Flag"
+    <img class="flag" [ngClass]="{active: translateService.currentLang === 'de'}" src="https://lipis.github.io/flag-icon-css/flags/4x3/de.svg" alt="Germany Flag"
          (click)="useLanguage('de')">
   </div>
   <div class="col-sm-10">
-    <img class="flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" alt="United Kingdom Flag"
+    <img class="flag" [ngClass]="{active: translateService.currentLang === 'en'}" src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" alt="United Kingdom Flag"
          (click)="useLanguage('en')">
   </div>
   <!-- Information Part -->
