@@ -51,7 +51,9 @@
   },
   "DateConf": {
     "fontSize": "Font Size",
-    "dateFormat": "Date Format"
+    "dateFormat": "Date Format",
+    "dateMonthFormat": "Month Format",
+    "dateDayFormat": "Day Format"
   },
   "NewsConf": {
     "fontSize": "Font Size",
@@ -73,5 +75,35 @@
     "humidity": "Humidity",
     "uvIndex": "UV Index",
     "windSpeed": "Km/h Wind Speed"
+  },
+  "WeatherForecastWeekly":{
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Sunday": "Sunday"
+  },
+  "Date":{
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Sunday": "Sunday",
+    "January": "January",
+    "February": "February",
+    "March": "March",
+    "April": "April",
+    "May": "May",
+    "June": "June",
+    "July": "July",
+    "August": "August",
+    "September": "September",
+    "October": "October",
+    "November": "November",
+    "December": "December"
   }
 }

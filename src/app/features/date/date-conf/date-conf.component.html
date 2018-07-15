@@ -8,6 +8,24 @@
              #name="ngModel">
     </div>
     <div class="form-group">
+      <label for="formatDateMonth" translate>DateConf.dateMonthFormat</label>
+      <select class="form-control" id="formatDateMonth"
+              required
+              [(ngModel)]="formatService.formatDateMonth" name="formatDateMonth"
+              #name="ngModel">
+        <option *ngFor="let format of formatService.posDateMonthFormats" [value]="format">{{format}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="formatDateDay" translate>DateConf.dateDayFormat</label>
+      <select class="form-control" id="formatDateDay"
+              required
+              [(ngModel)]="formatService.formatDateDay" name="formatDateDay"
+              #name="ngModel">
+        <option *ngFor="let format of formatService.posDateDayFormats" [value]="format">{{format}}</option>
+      </select>
+    </div>
+    <div class="form-group">
       <label for="formatDate" translate>DateConf.dateFormat</label>
       <select class="form-control" id="formatDate"
               required

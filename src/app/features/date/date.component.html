@@ -1,3 +1,5 @@
 <h1 [ngStyle]="{'font-size': formatService.dateFontSize + 'rem'}">
-  {{date | date:formatService.formatDate}}
+  <div *ngIf="formatService.formatDateMonth !== 'none'">{{'Date.' + (date | date:formatService.formatDateMonth) | translate}}</div>
+  <div *ngIf="formatService.formatDateDay !== 'none'">{{'Date.' + (date | date:formatService.formatDateDay) | translate}}</div>
+  <div *ngIf="formatService.formatDate !== 'none'">{{date | date:formatService.formatDate}}</div>
 </h1>

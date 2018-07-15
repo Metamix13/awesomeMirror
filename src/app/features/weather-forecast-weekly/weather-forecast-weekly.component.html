@@ -1,6 +1,6 @@
 <div class="card-group">
   <div class="card text-center" *ngFor="let day of weatherService.weatherData?.daily.data | slice:1:8">
-    <h5 class="card-title">{{day?.time * 1000 | date:'EEEE'}}</h5>
+    <h5 class="card-title">{{'WeatherForecastWeekly.' + (day?.time * 1000 | date:'EEEE') | translate}}</h5>
     <!-- CSS Pictures with conditions -->
     <div class="card-img-top">
       <div class="icon sunny"
