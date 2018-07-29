@@ -22,3 +22,7 @@ i{
 .dropdown {
   display:inline;
 }
+
+.card-header{
+  background-color: #343a40;
+}

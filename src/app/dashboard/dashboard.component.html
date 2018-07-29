@@ -5,7 +5,7 @@
        [handle]="handler"
        [position]="{x: feature.xPos, y: feature.yPos}"
        (endOffset)="onMoveEnd(feature, $event)"
-       [ngClass]="{'border-light': viewModeService.viewMode}">
+       [ngClass]="{'border-light': !viewModeService.viewMode}">
     <!-- Card Header and Action Items -->
     <div class="card-header" [hidden]="viewModeService.viewMode">
       {{'FeatureList.' + feature.name | translate}}

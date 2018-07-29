@@ -1,6 +1,7 @@
 .fa-sign-out {
   cursor: pointer;
   opacity: 0.3;
+  color: grey;
 }
 
 .dropdown-item {

@@ -59,19 +59,19 @@ h1.cold {
 
 .cloud:nth-child(2) {
   z-index: 0;
-  background: gray;
-  box-shadow: -2.1875em 0.6875em 0 -0.6875em gray,
-  2.0625em 0.9375em 0 -0.9375em gray,
-  0 0 0 0.375em gray,
-  -2.1875em 0.6875em 0 -0.3125em gray,
-  2.0625em 0.9375em 0 -0.5625em gray;
+  background: whitesmoke;
+  box-shadow: -2.1875em 0.6875em 0 -0.6875em whitesmoke,
+  2.0625em 0.9375em 0 -0.9375em whitesmoke,
+  0 0 0 0.375em whitesmoke,
+  -2.1875em 0.6875em 0 -0.3125em whitesmoke,
+  2.0625em 0.9375em 0 -0.5625em whitesmoke;
   opacity: 0.3;
   transform: scale(0.5) translate(6em, -3em);
   animation: cloud 4s linear infinite;
 }
 
 .cloud:nth-child(2):after {
-  background: gray;
+  background: whitesmoke;
 }
 
 .sun {
@@ -95,9 +95,9 @@ h1.cold {
   width: 0.375em;
   height: 1.125em;
   margin-left: -0.1875em;
-  background: black;
+  background: white;
   border-radius: 0.25em;
-  box-shadow: 0 5.375em black;
+  box-shadow: 0 5.375em white;
 }
 
 .rays:before,
@@ -111,9 +111,9 @@ h1.cold {
   height: 1.125em;
   transform: rotate(60deg);
   transform-origin: 50% 3.25em;
-  background: black;
+  background: white;
   border-radius: 0.25em;
-  box-shadow: 0 5.375em black;
+  box-shadow: 0 5.375em white;
 }
 
 .rays:before {
